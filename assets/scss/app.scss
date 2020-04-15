@@ -1,0 +1,182 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Record Music Event Multipurpose
+Version:    1.0.0
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+1. All common core files (Variables / colors / bootstrap )
+2- Plugins
+3- Panel Components
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[1. All common core files]
+*/
+//// Necessary Modules
+@import 'basic/variables';
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../node_modules/lightslider/dist/css/lightslider";
+// @import "../../node_modules/lightgallery/dist/css/lightgallery.min";
+// @import "../../node_modules/node-snackbar/dist/snackbar.min";
+@import '../fonts/lineicons/lineicons';
+@import '../fonts/roboto/roboto';
+
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
+// // @font-face {
+//     font-family: 'lineicons';
+//     src: url('../fonts/lineicons.ttf') format('embedded-opentype'),
+//     url('../fonts/lineicons.ttf') format('truetype'),
+//     url('../fonts/lineicons.woff') format('woff'),
+//     url('../fonts/lineicons.svg') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'lineicons';
+//     src: url('./fonts/lineicons.ttf') format('embedded-opentype'),
+//     url('../fonts/lineicons.ttf') format('truetype'),
+//     url('../fonts/lineicons.woff') format('woff'),
+//     url('../fonts/lineicons.svg') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+
+@import '../scss/libs/animations';
+// // @import "../scss/libs/lightslider";
+// /*--Responsive Helpers-------------------------------------------------*/
+@import "basic/responsive-helper";
+// // /*--Nav-------------------------------------------------*/
+@import "basic/navDefault";
+// // /*--Functions-------------------------------------------------*/
+@import 'basic/mixins';
+// // /*--Base-------------------------------------------------*/
+@import "basic/base";
+// // /*--Breadcrumbs-------------------------------------------------*/
+@import "basic/breadcrumbs";
+// // /*--Fiqures-------------------------------------------------*/
+@import "basic/figure";
+// // /*--Pre loader-------------------------------------------------*/
+@import "basic/preloader";
+// // /*--Social-------------------------------------------------*/
+@import "basic/social";
+// // /*--Helpers-------------------------------------------------*/
+@import "basic/helper";
+// // /*--Colors-------------------------------------------------*/
+@import "libs/colors";
+// // /*--LightSlider-------------------------------------------------*/
+// // @import "components/lightSlider";
+// // /*------------------------------------------------------------------
+// // /*--Letter Avatars-------------------------------------------------*/
+@import "libs/letters";
+// // /*--Components-------------------------------------------------*/
+@import "components/_nav";
+@import "components/player";
+@import "components/_xvslider";
+@import "components/_forms";
+@import "components/_forms-material";
+@import "components/sidebarMenu";
+@import "components/shortcodes";
+@import "components/services";
+@import "components/sticky";
+@import "components/counter";
+@import "components/nav";
+@import "components/hero";
+@import "components/control-sidebar";
+@import "components/timeline";
+@import "components/preloaders";
+@import "components/search";
+@import "basic/overlay";
+@import "basic/card";
+@import "basic/theme-dark";
+@import "templates/template-contact";
+@import "basic/rtl";
+
+.r-conainter{
+    max-width: 1820px;
+    margin: 0 auto;
+}
+
+
+
+
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+
+
+.slick-arrow{
+background: #000;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+font-size: 25px;
+text-align: center;
+line-height: 40px;
+z-index: 9;
+
+
+}.slick-next {
+  right: -50PX;
+}
+.slick-prev {
+  left: -50PX;
+}
+  .slick-prev:before {
+    font-family: 'lineicons' !important;
+    content: "\F104";
+    color: #fff;
+  }
+  
+  .slick-next:before {
+    font-family: 'lineicons' !important;
+    content: "\F105";
+    color: #fff;
+
+  }
+
+
+
+  /* / ## Share Plugin --------------------------------------------- */
+.s-plugins {
+  position: relative;
+}
+.s-plugins .s-icon {
+  font-size: 24px;
+}
+.sharer-bar {
+  margin-top: -70px;
+  transform-origin: 0 0 0;
+  background: #000;
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+  visibility: hidden;
+  position: absolute;
+  left: -47px;
+  right: 0;
+  width: 150px;
+  z-index: 1;
+}
+.sharer-bar.active {
+  transform: scale(1) translateY(-10px);
+  opacity: 1;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+}

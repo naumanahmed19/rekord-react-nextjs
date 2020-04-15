@@ -8,8 +8,36 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@zeit/next-sass": "^1.0.1",
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.4.1",
+    "google-map-react": "^1.1.7",
+    "isomorphic-unfetch": "^3.0.0",
+    "jquery": "^3.4.1",
     "next": "9.2.2",
+    "next-routes": "^1.4.2",
+    "nextjs-progressbar": "^0.0.4",
+    "node-sass": "^4.13.1",
+    "nprogress": "^0.2.0",
+    "popper.js": "^1.12.5",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-url": "^8.0.0",
     "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react-animated-css": "^1.2.1",
+    "react-bnb-gallery": "^1.1.9",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-countdown": "^2.2.1",
+    "react-dom": "16.13.0",
+    "react-lightgallery": "^0.6.3",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1",
+    "wavesurfer.js": "^3.3.1"
+  },
+  "devDependencies": {
+    "file-loader": "^5.1.0",
+    "next-compose-plugins": "^2.2.0",
+    "url-loader": "^3.0.0"
   }
 }

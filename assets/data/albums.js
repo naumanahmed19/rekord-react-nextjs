@@ -1,0 +1,108 @@
+
+const albums = [
+    {
+      id: 0,
+      title: "Good Things",
+      slug: slugify("Good Things"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "https://xvelopers.com/demos/html/record/assets/img/demo/a1.jpg",
+      cover:
+        "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/b3.jpg",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 1,
+      title: "New Life Started",
+      slug: slugify("New Life Started"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "https://xvelopers.com/demos/html/record/assets/img/demo/a2.jpg",
+      cover: "https://source.unsplash.com/2400x700/?music",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 2,
+      title: "Tip Top Tik",
+      slug: slugify("Tip Top Tik"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "https://xvelopers.com/demos/html/record/assets/img/demo/a3.jpg",
+      cover: "https://source.unsplash.com/2400x700/?event",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 3,
+      title: "Some rock some",
+      slug: slugify("Some rock some"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "	https://xvelopers.com/demos/html/record/assets/img/demo/a4.jpg",
+      cover: "https://source.unsplash.com/2400x700/?music",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 4,
+      title: "I believe in you",
+      slug: slugify("I believe in you"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "	https://xvelopers.com/demos/html/record/assets/img/demo/a5.jpg",
+      cover: "https://source.unsplash.com/2400x700/?music",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 5,
+      title: "You love me too",
+      slug: slugify("You love me too"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "	https://xvelopers.com/demos/html/record/assets/img/demo/a6.jpg",
+      cover: "https://source.unsplash.com/2400x700/?music",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 6,
+      title: "Nice to have We ",
+      slug: slugify("Nice to have We"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "	https://xvelopers.com/demos/html/record/assets/img/demo/a7.jpg",
+      cover: "https://source.unsplash.com/2400x700/?music",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+    {
+      id: 7,
+      title: "Where We Belong",
+      slug: slugify("Where We Belong"),
+      subtitle: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
+        aut blanditiis consectetur</p>`,
+      image: "	https://xvelopers.com/demos/html/record/assets/img/demo/a8.jpg",
+      cover: "https://source.unsplash.com/2400x700/?music",
+      btnLabel: "Buy Now At iTunes",
+      btnUrl: "#",
+      artists,
+      tracks,
+    },
+  ];
