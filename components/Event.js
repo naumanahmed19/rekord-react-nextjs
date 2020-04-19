@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { backgroundImage } from "../helpers/Utils";
+import { date } from "../helpers/Utils";
 import { Animated } from "react-animated-css";
 import {AvatarGroup} from '../components';
 
@@ -10,8 +10,8 @@ const Event = ({ className, event, type = "grid" }) => {
     <div>
       <div>
         <div className="mr-3 float-left text-center">
-          <div className="s-36">{event_date[0]}</div>
-          <span>{event_date[1]}</span>
+          <div className="s-36">{date(event.date,'d')}</div>
+          <span>{date(event.date,'m')}</span>
         </div>
         <div>
           <Link href="/event/[event.slug]" as={`/event/${event.slug}`}>

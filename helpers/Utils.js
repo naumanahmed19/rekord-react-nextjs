@@ -27,3 +27,15 @@ export const backgroundImage = imageUrl => {
         }:'';
 
   };
+
+
+  export const date = (date,type)=>{
+      
+    const event_date = date.split(" ");
+
+    if(type === 'm') return event_date[1];
+    else if(type === 'y') return event_date[2];
+   
+    return event_date[0];
+
+  }

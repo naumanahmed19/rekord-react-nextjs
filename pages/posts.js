@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, Post } from "../components";
+import { Layout, Post, Sidebar } from "../components";
 import { posts } from "../assets/data/data";
 import { Row, Col } from "react-bootstrap";
 
@@ -21,6 +21,9 @@ class Posts extends Component {
             {posts.map((post) => (
               <Post post={post} key={post.id} />
             ))}
+          </Col>
+          <Col md={4}>
+            <Sidebar />
           </Col>
         </Row>
       </Layout>

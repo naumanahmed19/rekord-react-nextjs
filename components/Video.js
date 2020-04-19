@@ -1,10 +1,9 @@
 import Link from "next/link";
 
 const Video = ({video,className}) => {
-  const {id} = video;
   return (
     <div className={className}>
-      <Link href="/video/[id]" as={`/video/${id}`}>
+      <Link href="/video/[slug]" as={`/video/${video.slug}`}>
     <div className="clickable card">
       <figure className="card-img figure">
         <div className="img-wrapper">

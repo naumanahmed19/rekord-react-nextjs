@@ -1,12 +1,8 @@
 import { useRouter } from "next/router";
-import fetch from "isomorphic-unfetch";
 import Slider from "react-slick";
-
 import { videos } from "../../assets/data/data";
-import { html } from "../../helpers/Utils";
-
-import { TrackList, Layout } from "../../components";
-import { backgroundImage } from "../../helpers/Utils";
+import { Comments, Layout, Sidebar } from "../../components";
+import { Col, Row } from "react-bootstrap";
 
 const Video = ({ video }) => {
   const router = useRouter();
@@ -18,22 +14,22 @@ const Video = ({ video }) => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
-        }
+          slidesToShow: 1,
+        },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     <Layout>
-      <div className="row">
-        <div className="offset-md-2 col-lg-8">
+      <Row>
+        <Col md={8}>
           <div className="video-responsive">
             <div className="card no-b r-0">
               <div className="card-body p-4">
@@ -157,34 +153,26 @@ const Video = ({ video }) => {
 
           <div className="card mt-1 mb-5">
             <div className="card-body">
-              {video.comments.map(comment => {
-                <div className="media my-5 ">
-                  <div className="avatar avatar-md mr-3 mt-1">
-                    <img src={comment.user.avatar} alt="user" />
-                  </div>
-                  <div className="media-body">
-                    <h6 className="mt-0">{comment.user.name}</h6>
-                    {comment.content}
-                  </div>
-                </div>;
-              })}
+              <Comments comments={video.comments} />
             </div>
           </div>
-        </div>
-      </div>
+        </Col>
+        <Col md={4}>
+          <Sidebar />
+        </Col>
+      </Row>
     </Layout>
   );
 };
 
-Video.getInitialProps = async ctx => {
-  const { id } = ctx.query;
+Video.getInitialProps = async (ctx) => {
+  const { slug } = ctx.query;
 
-  const video = videos.filter(video => video.id == id)[0];
+ const video = videos.filter((video) => video.slug == slug)[0];
 
-  console.log(video);
-  // const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  // const json = await res.json()
-  return { video };
+  // // const res = await fetch('https://api.github.com/repos/zeit/next.js')
+  // // const json = await res.json()
+ return { video };
 };
 
 export default Video;

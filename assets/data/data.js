@@ -169,6 +169,43 @@ export const artists = [
 
 ];
 
+export const playListTracks = [
+
+
+  {
+    id: 1,
+    title: "Sound Helix Sample Track",
+    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    thumbnail:
+      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
+    artists: artists.slice(1, 4),
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 2,
+    title: "Helix Sample Track",
+    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    thumbnail:
+      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
+    artists: artists.slice(1, 4),
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 0,
+    title: "Live Radio Stream",
+    isStream: true,
+    url: "http://live.radiom.fr/live600.opus",
+    thumbnail:
+      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
+    artists: artists.slice(1, 4),
+    time: "5:03",
+    category: "rock",
+  },
+
+];
+
 
 
 export const tracks = [
@@ -178,7 +215,7 @@ export const tracks = [
     url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
     thumbnail:
       "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-    artists: artists.slice(1, 3),
+    artists: artists.slice(1, 4),
     time: "5:03",
     category: "rock",
   },
@@ -186,9 +223,9 @@ export const tracks = [
     id: 1,
     title: "We will be together",
     url: "https://xvelopers.com/demos/html/record/assets/media/track2.mp3",
-    thumbnail:
-      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a7.jpg",
-      artists: artists.slice(3,7),
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a1.jpg",
+    cover: "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a7.jpg",
+      artists: artists.slice(5,8),
     time: "4:03",
     category: "sufi",
   },
@@ -196,92 +233,84 @@ export const tracks = [
     id: 2,
     title: "Wo Lamhy wo batain",
     url: "https://xvelopers.com/demos/html/record/assets/media/track3.mp3",
-    thumbnail:
-      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a5.jpg",
-      artists: artists.slice(0,1),
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a2.jpg",
+      artists: artists.slice(1,4),
     time: "7:03",
     category: "pop",
   },
   {
     id: 3,
     title: "Nacg to fice",
-    url: "https://xvelopers.com/demos/html/record/assets/media/track3.mp3",
-    thumbnail:
-      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a5.jpg",
-      artists: artists.slice(1, 3),
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track66.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a3.jpg",
+      artists: artists.slice(5, 8),
     time: "7:03",
     category: "jazz",
   },
   {
     id: 4,
-    title: "one",
-    url: "https://xvelopers.com/demos/html/record/assets/media/track2.mp3",
-    thumbnail:
-      "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a5.jpg",
-      artists: artists.slice(1, 3),
+    title: "No one better than you",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track7c.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a4.jpg",
+      artists: artists.slice(1, 4),
     time: "7:03",
     category: "classic",
   },
-  // {
-  //   id: 18,
-  //   title: "one",
-  //   url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
-  //   thumbnail:
-  //     "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-  //     artists: artists.slice(1, 3),
-  //   time: "5:03",
-  //   category: "rock",
-  // },
-  // {
-  //   id: 16,
-  //   title: "one",
-  //   url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
-  //   thumbnail:
-  //     "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-  //     artists: artists.slice(1, 3),
-  //   time: "5:03",
-  //   category: "rock",
-  // },
-  // {
-  //   id: 16,
-  //   title: "one",
-  //   url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
-  //   thumbnail:
-  //     "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-  //     artists: artists.slice(1, 3),
-  //   time: "5:03",
-  //   category: "rock",
-  // },
-  // {
-  //   id: 16,
-  //   title: "one",
-  //   url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
-  //   thumbnail:
-  //     "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-  //     artists: artists.slice(1, 3),
-  //   time: "5:03",
-  //   category: "rock",
-  // },
-  // {
-  //   id: 16,
-  //   title: "one",
-  //   url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
-  //   thumbnail:
-  //     "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-  //   artist: "Atif Aslam",
-  //   time: "5:03",
-  //   category: "rock",
-  // },
-  // {
-  //   id: 16,
-  //   title: "one",
-  //   url: "https://xvelopers.com/demos/html/record/assets/media/track1.mp3",
-  //   thumbnail:
-  //     "https://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/a6.jpg",
-  //     artists: artists.slice(1, 3),
-  //   time: "5:03",
-  //   category: "rock",
-  // },
+  {
+    id: 5,
+    title: "Root cause of love",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track7b.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a5.jpg",
+      artists: artists.slice(5, 8),
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 6,
+    title: "Xami ki thara",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track7a.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a6.jpg",
+      artists: artists.slice(1, 4),
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 7,
+    title: "Who is the best",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track8e.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a4.jpg",
+      artists: artists.slice(5, 8),
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 8,
+    title: "Crush it now",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track8d.mp3",
+    thumbnail:
+      "https://xvelopers.com/demos/html/record/assets/img/demo/a3.jpg",
+      artists: artists.slice(1, 4),
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 9,
+    title: "Will you be my friend",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track8c.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a8.jpg",
+    artist: "Atif Aslam",
+    time: "5:03",
+    category: "rock",
+  },
+  {
+    id: 16,
+    title: "Spank at wall",
+    url: "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/track8a.mp3",
+    thumbnail: "https://xvelopers.com/demos/html/record/assets/img/demo/a1.jpg",
+      artists: artists.slice(5, 8),
+    time: "5:03",
+    category: "rock",
+  },
 ];
 
 
@@ -692,6 +721,7 @@ export const videos = [
   {
     id: 0,
     title: "Desireless – Voyage Royage",
+    slug: slugify("Desireless – Voyage Royage"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -702,7 +732,8 @@ export const videos = [
   },
   {
     id: 1,
-    title: "Desireless – Voyage Royage",
+    title: "Bayan Hai k tum be",
+    slug: slugify("Bayan Hai k tum be"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -713,7 +744,8 @@ export const videos = [
   },
   {
     id: 2,
-    title: "Desireless – Voyage Royage",
+    title: "Kia din badal gay",
+    slug: slugify("Kia din badal gay"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -725,6 +757,7 @@ export const videos = [
   {
     id: 3,
     title: "Desireless – Voyage Royage",
+    slug: slugify("Desireless – Voyage Royage"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -736,6 +769,7 @@ export const videos = [
   {
     id: 4,
     title: "Desireless – Voyage Royage",
+    slug: slugify("Desireless – Voyage Royage"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -747,6 +781,7 @@ export const videos = [
   {
     id: 5,
     title: "Desireless – Voyage Royage",
+    slug: slugify("Desireless – Voyage Royage"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -758,6 +793,7 @@ export const videos = [
   {
     id: 6,
     title: "Desireless – Voyage Royage",
+    slug: slugify("Desireless – Voyage Royage"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:
@@ -769,6 +805,7 @@ export const videos = [
   {
     id: 7,
     title: "Desireless – Voyage Royage",
+    slug: slugify("Desireless – Voyage Royage"),
     content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Architecto atque
       aut blanditiis consectetur</p>`,
     thumbnail:

@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { PlayListContext } from "../PlaylistContext";
 import { Button } from "react-bootstrap";
 
-const PlayButton = ({ track, large, small, primary }) => {
+const PlayButton = ({ track, large, medium, primary }) => {
   const { isPlaying, handlePlayTrack } = useContext(PlayListContext);
 
   const buttonClasses = () => {
     let classes = ['clickable','text-primary'];
     classes.push( isPlaying(track) ? "icon-pause" : "icon-play");
-    classes.push(large ? 's-48': 's-24');
+    if(large) classes.push('s-48');
+    else if(medium)classes.push('s-24') ;
     return classes.join(' ');
   };
 

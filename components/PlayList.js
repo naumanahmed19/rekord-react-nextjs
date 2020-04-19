@@ -36,7 +36,7 @@ const { tracks } = useContext(PlayListContext);
           </div>
         </div>
       </aside>
-      <div className="control-sidebar-bg shadow fixed"></div>
+      <div className="control-sidebar-bg shadow  fixed"></div>
     </React.Fragment>
   );
 };
