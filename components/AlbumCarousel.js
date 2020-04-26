@@ -1,9 +1,7 @@
 import Slider from "react-slick";
 import Album from "./Album";
-const AlbumCarousel = ({albums}) => {
-
-    
-    var settings = {
+const AlbumCarousel = ({ albums,title,subtitle }) => {
+  var settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -18,8 +16,8 @@ const AlbumCarousel = ({albums}) => {
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 480,
@@ -27,21 +25,29 @@ const AlbumCarousel = ({albums}) => {
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
-  
+  return (
+    <React.Fragment>
 
-    return ( 
-        <Slider className="has-items-overlay playlist" {...settings}>
-        {albums.map(album => (
+      {(title || subtitle) && <div className="d-flex relative" >
+        <div className="mb-4">
+          <h4>{title}</h4>
+          <p>{subtitle}</p>
+        </div>
+      </div> }
+     
+      <Slider className="has-items-overlay playlist" {...settings}>
+        {albums.map((album) => (
           <Album album={album} key={album.id} />
         ))}
       </Slider>
-     );
-}
- 
+    </React.Fragment>
+  );
+};
+
 export default AlbumCarousel;

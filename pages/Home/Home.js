@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import {  homeTabs, albums, events,tracks } from "../../assets/data/data";
+import {  homeTabs, albums,posts, events,tracks } from "../../assets/data/data";
 
 
 import {
@@ -7,9 +7,35 @@ import {
   AlbumCarousel,
   PostCarousel,
   CategoryTabs,
-  EventList 
+  EventList ,
+  PostWidget
 } from "../../components";
+import Slider from "react-slick";
+    
+var settings = {
+  dots: true,
 
+  // responsive: [
+  //   {
+  //     breakpoint: 768,
+  //     settings: {
+  //       arrows: false,
+  //       centerMode: true,
+  //       centerPadding: "40px",
+  //       slidesToShow: 3
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 480,
+  //     settings: {
+  //       arrows: false,
+  //       centerMode: true,
+  //       centerPadding: "40px",
+  //       slidesToShow: 1
+  //     }
+  //   }
+  // ]
+};
 const Home = () => {
   return (
     <div>
@@ -17,20 +43,23 @@ const Home = () => {
     <Layout>
         <div className="p-3b">
         <section>
-          <AlbumCarousel albums={albums} />
+          <AlbumCarousel 
+             title="Latest Posts"
+             subtitle="Checkout What's new at our blog"
+          albums={albums}  pp={events} />
         </section>
         <section className="section">
           <PostCarousel
             title="Latest Posts"
             subtitle="Checkout What's new at our blog"
-            posts={albums}
+            posts={posts}
           />
         </section>
         <section className="section mt-4">
           <div className="row row-eq-height">
             <div className="col-lg-8">
               <CategoryTabs
-                title="Latest Posts"
+                title="Latest Tracks"
                 subtitle="Checkout What's new at our blog"
                 tracks={tracks}
                 tabs={homeTabs}

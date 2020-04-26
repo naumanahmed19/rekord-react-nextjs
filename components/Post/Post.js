@@ -1,27 +1,28 @@
 import { Card } from "react-bootstrap";
 import { Content } from "..";
-import Link from "next/link";
 import { Animated } from "react-animated-css";
+import { date } from "../../helpers/Utils";
+import Link from "next/link";
 const Post = ({ post }) => {
-  const post_date = post.date.split(" ");
-
   return (
     <Animated animationIn="fadeInUp" isVisible={true}>
       <Card className="mb-3">
         <div className="p-3">
           <div className="d-md-flex align-items-center">
             <div className="mr-3 ml-md-4 text-md-center">
-              <div className="s-24">{post_date[0]}</div>
+              <div className="s-24">{date(post.date, "d")}</div>
               <small>
-                {post_date[1]} {post_date[2]}
+                {date(post.date, "m")} {date(post.date, "y")}
               </small>
             </div>
             <div>
-              <a href="blog-single.html">
-                <h2 className="font-weight-lighter h3 my-3 text-primary">
-                  {post.title}
-                </h2>
-              </a>
+              <Link href="/post/[slug]" as={`/post/${post.slug}`}>
+                <a>
+                  <h2 className="font-weight-lighter h3 my-3 text-primary">
+                    {post.title}
+                  </h2>
+                </a>
+              </Link>
               <ul className="align-baseline list-inline">
                 <li className="list-inline-item">
                   <i className="icon-folder text-primary mr-2"></i>

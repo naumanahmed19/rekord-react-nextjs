@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 import { albums } from "../../assets/data/data";
 import { html } from "../../helpers/Utils";
 
-import { Layout, TrackList } from "../../components";
+import { Layout, TrackList,Like } from "../../components";
 import { backgroundImage } from "../../helpers/Utils";
 
 const Album = ({ album }) => {
@@ -14,6 +14,7 @@ const Album = ({ album }) => {
         className="relative"
         style={album.cover && backgroundImage(album.cover)}
       >
+        
         <div className="has-bottom-gradient">
           <div className="row pt-5 ml-lg-5 mr-lg-5">
             <div className="col-md-10 offset-1">
@@ -37,18 +38,7 @@ const Album = ({ album }) => {
                       >
                         <i className="icon-bookmark s-24"></i>
                       </a>
-                      <a
-                        href="#"
-                        className="snackbar ml-3"
-                        data-text="You like this song"
-                        data-pos="top-right"
-                        data-showAction="true"
-                        data-actionText="ok"
-                        data-actionTextColor="#fff"
-                        data-backgroundColor="#0c101b"
-                      >
-                        <i className="icon-heart s-24"></i>
-                      </a>
+                      <Like className="ml-3" likes={album.liked} likes={album.likes} size="s-24"/>
                       <a
                         href="#"
                         className="snackbar ml-3"

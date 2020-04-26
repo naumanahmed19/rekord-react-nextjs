@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import PostWidget from "./Posts/PostWidget";
+import PostWidget from "./PostWidget";
 const PostCarousel = ({ posts,title,subtitle }) => {
   var settings = {
     dots: true,
@@ -33,13 +33,13 @@ const PostCarousel = ({ posts,title,subtitle }) => {
 
   return (
     <React.Fragment>
-      <div className="d-flex relative">
+     {(title || subtitle) && <div className="d-flex relative" >
         <div className="mb-4">
           <h4>{title}</h4>
           <p>{subtitle}</p>
         </div>
-      </div>
-      <Slider className="has-items-overlay" {...settings}>
+      </div> }
+      <Slider className="has-items-overlay " {...settings}>
         {posts.map(post => (
           <PostWidget post={post} key={post.id} />
         ))}

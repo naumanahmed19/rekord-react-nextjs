@@ -1,27 +1,49 @@
-const Like = ({liked, count=0, size="s-18"}) => {
+import { Component } from "react";
 
+class Like extends Component {
+  state = { liked: false, likes: 0 };
+  classNames = (size) => {
+    let classNames = [size,'text-primary'];
+    const icon = this.state.liked ? "icon-heartbeat" : "icon-heart-o";
+    classNames.push(icon);
+    return classNames.join(" ");
+  };
+  handleLike = () => {
 
-    
-    const handleClick = () => {
-        
-    }
-    const classNames= () => {
-        let classNames = [size];
-        const icon =  liked ? 'icon-heart': 'icon-heart-o'; 
-        classNames.push(icon);
-        return classNames.join(' ');
-    }
+  
 
-  return (
-    <div className="clickable" onClick={handleClick}>
-      <i className={classNames()}></i>
-      <span className="fav-count">
-        <span data-favorites-post-count-id="1372" data-siteid="48">
-          {count}
+    let likes = this.state.likes;
+    !this.state.liked ? likes++ : likes--;
+    let liked = !this.state.liked;
+    this.setState({
+      liked,
+      likes
+    });
+
+  };
+
+  componentDidMount() {
+
+    this.setState({
+      likes: this.props.likes,
+      liked: this.props.liked,
+    });
+  }
+
+  render() {
+    const { size = "s-18",className } = this.props;
+
+    return (
+      <span className={className +' clickable relative '} onClick={this.handleLike}>
+        <i className={this.classNames(size)}></i>
+        <span className="fav-count">
+          <span>{this.state.likes}</span>
+
+   
         </span>
       </span>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Like;

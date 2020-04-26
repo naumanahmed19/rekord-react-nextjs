@@ -373,6 +373,8 @@ export const albums = [
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/b3.jpg",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks: tracks.slice(1,2),
   },
@@ -386,6 +388,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?music",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks: tracks.slice(3,4),
   },
@@ -399,6 +403,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?event",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks,
   },
@@ -412,6 +418,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?music",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks,
   },
@@ -425,6 +433,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?music",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks,
   },
@@ -438,6 +448,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?music",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks,
   },
@@ -451,6 +463,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?music",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks,
   },
@@ -464,6 +478,8 @@ export const albums = [
     cover: "https://source.unsplash.com/2400x700/?music",
     btnLabel: "Buy Now At iTunes",
     btnUrl: "#",
+    liked: false,
+    likes:33,
     artists,
     tracks,
   },
@@ -820,6 +836,7 @@ export const posts = [
   {
     id: 0,
     title: "New Amazing Rock Music Band in Town Performing Live",
+    type:'video',
     excerpt: `
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Aspernatur cum dolorem ea earum esse fuga incidunt iure,
@@ -850,6 +867,38 @@ export const posts = [
   },
   {
     id: 1,
+    title: "Rekord Music & Events Template",
+    type:'video',
+    excerpt: `
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur cum dolorem ea earum esse fuga incidunt iure,
+    magni molestias neque omnis optio perspiciatis, quibusdam
+    quod ratione, recusandae saepe temporibus unde...`,
+    content: `<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur cum dolorem ea earum esse fuga incidunt iure,
+    magni molestias neque omnis optio perspiciatis, quibusdam
+    quod ratione, recusandae saepe temporibus unde...
+    <p>				Yes, really.</p>
+    <p>First, it was the <a href="https://fashionjournal.com.au/beauty/news/i-tried-frank-body-shimmer-scrub-waitlist-50000" target="_blank" rel="noopener noreferrer">unicorn scrub</a>.</p>
+    <p>Now, we bring you a body scrub formulated from actual meteors from outer space. Yes, really.</p>
+    <p>The aptly-named Blaq Meteor Shower Scrub is a blend of ingredient-activated charcoal and fragments of matter from the cosmos, to provide you with a gentle exfoliation and glow.</p>
+    <p>The scrub itself looks great and all but we can’t really get over the fact that it contains ACTUAL METEORITE DUST FROM OUTER SPACE.</p>
+    <p>Each pack even comes with its own unique code so you can check out where and when your space dust came from (ours was from a meteorite that crashed into Morocco).</p>
+    <p>This also means no two scrubs are the same, which is great because I don’t want to share my space dust with anyone else.</p>
+    <p>We’re not sure how you get into the business of mining meteorite dust, but we’re all about turning it into an iridescent shower scrub.</p>
+    <p>The future is now, people.</p>
+    <p>Check it out for yourself <a href="https://meteor.blaq.co/" target="_blank" rel="noopener noreferrer">here</a>.	
+  </p>`,
+    slug: "rekord-music-events-template",
+    date: "09 July, 2019",
+    thumbnail: "https://source.unsplash.com/1600x500/?event",
+    category: "International",
+    author: users[0],
+    comments,
+  },
+  {
+    id: 2,
     title: "Rekord Music & Events Template",
     excerpt: `
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.

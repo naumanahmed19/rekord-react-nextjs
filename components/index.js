@@ -7,7 +7,7 @@ export { default as Sidebar }  from "./Sidebar";
 export { default as PlayList }  from "./PlayList";
 export { default as Search }  from "./Search";
 export { default as AlbumCarousel }  from "./AlbumCarousel";
-export { default as PostCarousel }  from "./PostCarousel";
+
 export { default as HomeSlider }  from "./HomeSlider";
 export { default as TrackList }  from "./TrackList";
 export { default as CategoryTabs }  from "./CategoryTabs";
@@ -26,8 +26,11 @@ export { default as VideoWidget }  from "./Video/VideoWidget";
 export { default as Event }  from "./Event";
 export { default as EventWidget }  from "./Event/EventWidget";
 
+//Post
+export { default as Post }  from "./Post/Post";
+export { default as PostWidget }  from "./Post/PostWidget";
+export { default as PostCarousel }  from "./Post/PostCarousel";
 
-export { default as Post }  from "./Posts/Post";
 export { default as Gallery }  from "./Gallery/Gallery";
 export { default as Artist }  from "./Artist/Artist";
 export { default as Podcast }  from "./Podcast/Podcast";

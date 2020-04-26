@@ -14,7 +14,7 @@ const Layout = ({children,title,subtitle,layout}) => {
   const header  =  ()=> {
     if (title ||subtitle) {
       return (
-        <div className="relative mb-5">
+        <div className="relative my-5">
           <h1 className="mb-2 text-primary">{title}</h1>
           <p>{subtitle}</p>
         </div>

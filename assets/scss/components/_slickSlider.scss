@@ -1,0 +1,42 @@
+
+
+.slick-arrow{
+    background: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    z-index: 9;
+  }
+  
+  .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+    background: $brand-primary;
+  }
+  .slick-next {
+    right: -50PX;
+  }
+  .slick-prev {
+    left: -50PX;
+  }
+  .slick-arrows-inside{
+    .slick-next {
+      right: 50PX;
+    }
+    .slick-prev {
+      left: 50PX;
+    }
+  }
+  .slick-prev:before {
+    font-family: 'lineicons' !important;
+    content: "\F104";
+    color: #fff;
+  }
+  .slick-next:before {
+    font-family: 'lineicons' !important;
+    content: "\F105";
+    color: #fff;
+  
+  }
+  

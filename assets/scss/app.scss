@@ -19,8 +19,6 @@ Version:    1.0.0
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-// @import "../../node_modules/lightslider/dist/css/lightslider";
-// @import "../../node_modules/lightgallery/dist/css/lightgallery.min";
 // @import "../../node_modules/node-snackbar/dist/snackbar.min";
 @import '../fonts/lineicons/lineicons';
 @import '../fonts/roboto/roboto';
@@ -50,8 +48,6 @@ Version:    1.0.0
 
 
 
-@import '../scss/libs/animations';
-// // @import "../scss/libs/lightslider";
 // /*--Responsive Helpers-------------------------------------------------*/
 @import "basic/responsive-helper";
 // // /*--Nav-------------------------------------------------*/
@@ -73,7 +69,7 @@ Version:    1.0.0
 // // /*--Colors-------------------------------------------------*/
 @import "libs/colors";
 // // /*--LightSlider-------------------------------------------------*/
-// // @import "components/lightSlider";
+@import "components/slickSlider";
 // // /*------------------------------------------------------------------
 // // /*--Letter Avatars-------------------------------------------------*/
 @import "libs/letters";
@@ -101,7 +97,7 @@ Version:    1.0.0
 @import "basic/rtl";
 
 .r-conainter{
-    max-width: 1820px;
+    max-width: 1780px;
     margin: 0 auto;
 }
 
@@ -116,37 +112,6 @@ Version:    1.0.0
     @include media-breakpoint-only(xl) {
       column-count: 5;
     }
-  }
-
-
-.slick-arrow{
-background: #000;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-font-size: 25px;
-text-align: center;
-line-height: 40px;
-z-index: 9;
-
-
-}.slick-next {
-  right: -50PX;
-}
-.slick-prev {
-  left: -50PX;
-}
-  .slick-prev:before {
-    font-family: 'lineicons' !important;
-    content: "\F104";
-    color: #fff;
-  }
-  
-  .slick-next:before {
-    font-family: 'lineicons' !important;
-    content: "\F105";
-    color: #fff;
-
   }
 
 
@@ -316,6 +281,7 @@ z-index: 9;
   left: 17px;
   font-size: 9px;
 }
+
 
 /* Switch 3 Specific Style Start */
 

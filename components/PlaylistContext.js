@@ -135,9 +135,10 @@ export class PlayListProvider extends Component {
 
     try {
       await setTimeout(async () => {
-        if (this.wavesurfer.isReady) {
+        // alert(this.wavesurfer.isReady);
+        // if (this.wavesurfer.isReady) {
           await this.wavesurfer.play();
-        }
+      //  }
         this.togglePlayButtonIcon();
       }, 100);
     } catch (e) {
