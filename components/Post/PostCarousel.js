@@ -1,34 +1,33 @@
 import Slider from "react-slick";
 import PostWidget from "./PostWidget";
 const PostCarousel = ({ posts,title,subtitle }) => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
     slidesToShow: 3,
-    centerPadding: "60px",
     responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 3
-        }
+          slidesToShow:2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 1
-        }
-      }
-    ]
+
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (

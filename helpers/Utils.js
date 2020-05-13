@@ -9,6 +9,8 @@ export const handleOpenPlayList = () => {
 export const handleSidebarMenu = () => {
     const ele = document.body;
         ele.classList.toggle("sidebar-collapse");
+        ele.classList.toggle("sidebar-open");
+
 };
 
 

@@ -5,27 +5,26 @@ const AlbumCarousel = ({ albums,title,subtitle }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
     slidesToShow: 6,
-    centerPadding: "60px",
     responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
           slidesToShow: 3,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 1,
+
+          slidesToShow: 2,
         },
       },
     ],

@@ -20,6 +20,7 @@ const Sidebar = () => {
     e.preventDefault();
     console.log(href);
     router.push(href);
+    closeSidebarMenu();
   };
   //   const handleClick = e => {
   //     console.log(e);
