@@ -15,12 +15,14 @@ export { default as CategoryTabs }  from "./CategoryTabs";
 export { default as EventList }  from "./EventList";
 export { default as Album }  from "./Album";
 
-//Track
-export { default as TrackWidget }  from "./Track/TrackWidget";
+
 
 //Video
 export { default as Video }  from "./Video";
 export { default as VideoWidget }  from "./Video/VideoWidget";
+
+//Track
+export { default as TrackWidget }  from "./Track/Trackwidget"
 
 //Event
 export { default as Event }  from "./Event";
