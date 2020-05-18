@@ -29,4 +29,4 @@ const TrackSnackBar = ({title,time,thumbnail}) => {
     });
   };
  
-export default SnackBar;
+export default TrackSnackBar;
