@@ -8,7 +8,7 @@ const Podcast = ({ className, podcast }) => {
           <div className=" d-flex align-items-center">
             <div className="col-8 p-0">
               <div className="float-left mr-3 mt-2">
-                <PlayButton track={podcast.url} primary small />
+                <PlayButton track={podcast} primary small />
               </div>
               <h6 className="text-primary">{podcast.title}</h6>
               <small>Episode 1 - April 26, 2019 </small>

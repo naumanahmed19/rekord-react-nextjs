@@ -19,7 +19,7 @@ class Albums extends Component {
           {albums.map(album => (
             <Album album={album} key={album.id} />
           ))}
-          <div className="col-lg-3 col-md-4 col-sm-6 my-2"></div>
+        <div className="col-lg-3 col-md-4 col-sm-6 my-2"></div>
         </div>
       </Layout>
     );

@@ -674,3 +674,9 @@ $primary-color: $primary;
 .clickable{
   cursor: pointer;
 }
+.scrollable{
+ overflow-y:auto;
+}
+.hide-overflow{
+  overflow: hidden;
+}

@@ -14,7 +14,7 @@ const { tracks } = useContext(PlayListContext);
 
   return (
     <React.Fragment>
-      <aside id="playlist" className="control-sidebar fixed">
+      <aside id="playlist" className="control-sidebar fixed scrollable">
         <div className="slimScroll">
           <div className="sidebar-header">
             <h4>PlayList</h4>

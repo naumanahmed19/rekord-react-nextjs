@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { PlayListContext } from "../PlaylistContext";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 
 const AddToPlaylistButton = ({ track }) => {
@@ -8,9 +9,11 @@ const AddToPlaylistButton = ({ track }) => {
       );
     
   return (
-    <span onClick={() => handleAddToPlayList(track)}>
-      <i className="icon-add text-primary ml-3"></i>
+    <OverlayTrigger overlay={<Tooltip>Add to playlist</Tooltip>}>
+    <span className="btn-plain ml-3" onClick={() => handleAddToPlayList(track)}>
+      <i className="icon-add"></i>
     </span>
+    </OverlayTrigger>
   );
 };
 

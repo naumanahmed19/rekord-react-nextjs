@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 
@@ -6,8 +7,12 @@ import { html } from "../../helpers/Utils";
 
 import { Layout, TrackList,Like } from "../../components";
 import { backgroundImage } from "../../helpers/Utils";
+import { PlayListContext } from "../../components/PlaylistContext";
 
 const Album = ({ album }) => {
+
+  const { handlePlayAll} = useContext(PlayListContext);
+
   return (
     <Layout layout="full">
       <section
@@ -59,9 +64,15 @@ const Album = ({ album }) => {
                     dangerouslySetInnerHTML={html(album.subtitle)}
                   />
                   <div className="pt-3">
+                  <button  className="btn btn-primary btn-lg mr-3 btn-line" onClick={()=>handlePlayAll(album.tracks)}>
+                      <i className="icon-play mr-2"></i>
+                      Play All
+                    </button>
                     <a href={album.btnUrl} className="btn btn-primary btn-lg">
                       {album.btnLabel}
                     </a>
+
+          
                   </div>
                 </div>
               </div>

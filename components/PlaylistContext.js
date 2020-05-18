@@ -4,7 +4,11 @@ import { AUTO_PLAY, WAVE_COLOR } from "../config/Config";
 
 import { playListTracks } from "../assets/data/data";
 
-import {PRIMARY_COLOR} from '../config/Config'
+import { PRIMARY_COLOR } from "../config/Config";
+
+import { TrackSnackBar } from ".";
+
+import { snackbar } from "../helpers/Utils";
 
 export const PlayListContext = createContext();
 
@@ -15,7 +19,7 @@ export class PlayListProvider extends Component {
     currentTrackIndex: 0,
     isPlaying: false,
     disableNext: false,
-    disablePrevious: true
+    disablePrevious: true,
   };
 
   componentDidMount() {
@@ -30,7 +34,7 @@ export class PlayListProvider extends Component {
       waveColor: WAVE_COLOR,
       responsive: false,
       cursorColor: "transparent",
-      normalize: true
+      normalize: true,
     });
 
     this.wavesurfer.on("ready", () => {});
@@ -48,12 +52,10 @@ export class PlayListProvider extends Component {
    *  Play Current Track
    */
 
-  handlePlayTrack = async track => {
-    const trackList = this.state.tracks.filter(t => t.id != track.id);
+  handlePlayTrack = async (track) => {
+    const trackList = this.state.tracks.filter((t) => t.id != track.id);
 
     //add check if played from playlist sidebar then dont add track at top..
-
-   
 
     if (track == this.getCurrentTrack()) {
       this.wavesurfer.playPause();
@@ -61,17 +63,17 @@ export class PlayListProvider extends Component {
     } else if (this.state.tracks.indexOf(track) == -1) {
       const tracks = [...this.state.tracks, track];
       await this.setState({
-        tracks
+        tracks,
       });
 
       this.setCurrentTrack(tracks.indexOf(track));
     } else {
       this.setCurrentTrack(this.state.tracks.indexOf(track));
     }
-  
   };
 
-  addTrack = track => {
+  addTrack = (track) => {
+    console.log("up");
     let hasTrack;
     //Check if track is already in playlist
     //hasTrack =  this.state.tracks.filter(t => t.id == track.id);
@@ -81,23 +83,58 @@ export class PlayListProvider extends Component {
 
     //Add Track to playlist
     const tracks = [...this.state.tracks, track];
+
     this.setState({
-      tracks
+      tracks,
     });
+
+    snackbar("Added to playlist");
 
     this.disablePrevNextBtn();
   };
 
-  deleteTrack = track => {
+  handlePlayAll = (trackList) => {
+    let hasTrack;
+
+    let index = this.state.tracks.length;
+
+    const newTrackList = [];
+    trackList.forEach((track) => {
+      hasTrack = this.state.tracks.indexOf(track);
+      if (hasTrack > 0) return;
+      newTrackList.push(track);
+    });
+
+    const tracks = [...this.state.tracks, ...newTrackList];
+ 
+  setTimeout(() => {
+    this.setState({
+      tracks,
+    });
+    this.handlePlayTrack(trackList[0]);
+  }, 500);
+  
+
+   // console.log(this.state.tracks.length);
+   
+
+
+    this.disablePrevNextBtn();
+
+    snackbar("Playlist Updated");
+  };
+
+  deleteTrack = (track) => {
     const tracksList = [...this.state.tracks];
-    const tracks = tracksList.filter(t => t.id !== track.id);
+    const tracks = tracksList.filter((t) => t.id !== track.id);
     this.setState({ tracks });
   };
 
-  setCurrentTrack = async index => {
+  setCurrentTrack = async (index) => {
     const { tracks } = this.state;
- 
-    
+
+    TrackSnackBar(this.getCurrentTrack());
+
     if (tracks.indexOf(tracks[index]) === -1) {
       this.wavesurfer.pause();
       this.togglePlayButtonIcon();
@@ -106,7 +143,6 @@ export class PlayListProvider extends Component {
 
     await this.setState({
       currentTrackIndex: index,
-    
     });
 
     this.disablePrevNextBtn();
@@ -117,19 +153,15 @@ export class PlayListProvider extends Component {
     if (!track.url) return;
 
     let wave;
-    if(track.wave){
+    if (track.wave) {
       wave = track.wave;
     }
     await this.wavesurfer.load(track.url, wave);
 
-
-    if(track.isStream){
+    if (track.isStream) {
       wave = [0, 0];
       await this.wavesurfer.play();
     }
-
- 
-
 
     //await this.wavesurfer.pause();
 
@@ -137,8 +169,8 @@ export class PlayListProvider extends Component {
       await setTimeout(async () => {
         // alert(this.wavesurfer.isReady);
         // if (this.wavesurfer.isReady) {
-          await this.wavesurfer.play();
-      //  }
+        await this.wavesurfer.play();
+        //  }
         this.togglePlayButtonIcon();
       }, 100);
     } catch (e) {
@@ -151,17 +183,16 @@ export class PlayListProvider extends Component {
   };
 
   togglePlayButtonIcon() {
-
     const buttonClass = this.wavesurfer.isPlaying()
       ? "icon-pause"
       : "icon-play";
     this.setState({
       buttonClass,
-      isPlaying: this.wavesurfer.isPlaying()
+      isPlaying: this.wavesurfer.isPlaying(),
     });
   }
 
-  isPlaying = track => {
+  isPlaying = (track) => {
     return (
       this.state.tracks[this.state.currentTrackIndex].id === track.id &&
       this.state.tracks[this.state.currentTrackIndex].url === track.url &&
@@ -209,32 +240,35 @@ export class PlayListProvider extends Component {
     let disablePrevious = this.state.currentTrackIndex == 0;
     this.setState({
       disableNext,
-      disablePrevious
+      disablePrevious,
     });
   };
 
   render() {
     return (
-      <PlayListContext.Provider
-        value={{
-          state: this.state,
-          tracks: this.state.tracks,
-          handlePlayPause: this.handlePlayPause,
-          handlePlayTrack: this.handlePlayTrack,
-          handleNextTrack: this.handleNextTrack,
-          handlePreviousTrack: this.handlePreviousTrack,
-          handleAddToPlayList: this.addTrack,
-          handleDeleteTrack: this.deleteTrack,
-          disableNext: this.state.disableNext,
-          disablePrevious: this.state.disablePrevious,
-          buttonClass: this.state.buttonClass,
-          isStream:this.isStream,
-          isPlaying: this.isPlaying,
-          currentTrack: this.getCurrentTrack
-        }}
-      >
-        {this.props.children}
-      </PlayListContext.Provider>
+      <div>
+        <PlayListContext.Provider
+          value={{
+            state: this.state,
+            tracks: this.state.tracks,
+            handlePlayPause: this.handlePlayPause,
+            handlePlayTrack: this.handlePlayTrack,
+            handleNextTrack: this.handleNextTrack,
+            handlePreviousTrack: this.handlePreviousTrack,
+            handleAddToPlayList: this.addTrack,
+            handlePlayAll: this.handlePlayAll,
+            handleDeleteTrack: this.deleteTrack,
+            disableNext: this.state.disableNext,
+            disablePrevious: this.state.disablePrevious,
+            buttonClass: this.state.buttonClass,
+            isStream: this.isStream,
+            isPlaying: this.isPlaying,
+            currentTrack: this.getCurrentTrack,
+          }}
+        >
+          {this.props.children}
+        </PlayListContext.Provider>
+      </div>
     );
   }
 }

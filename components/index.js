@@ -23,6 +23,7 @@ export { default as VideoWidget }  from "./Video/VideoWidget";
 
 //Track
 export { default as TrackWidget }  from "./Track/Trackwidget"
+export { default as TrackSnackBar } from './Track/TrackSnackBar';
 
 //Event
 export { default as Event }  from "./Event";
@@ -49,3 +50,4 @@ export { default as ArtistLettersFilter }  from "./Artist/ArtistLettersFilter";
  export { default as TrackDownloadButton } from './Common/TrackDownloadButton';
  export { default as ShareButton } from './Common/ShareButton';
  export { default as Banner } from './Common/Banner';
+

@@ -72,34 +72,36 @@ const Player = props => {
           <div id="wavesurfer" className={ currentTrack().isStream ? 'd-none':''}></div>
           { currentTrack().isStream?
         <div className="music_pseudo_bars">
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                                <div className="music_pseudo_bar"></div>
-                            </div> :''  
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+            <div className="music_pseudo_bar"></div>
+        </div> :''  
         }
         </div>
         <div className="col d-none d-lg-block">
           <small className="track-time mr-2 text-primary align-middle"></small>
-          <a data-toggle="control-sidebar" onClick={handleOpenPlayList}>
-            <i className="icon icon-menu-3 s-24 align-middle"></i>
+          <a className="btn-playlist" onClick={handleOpenPlayList}>
+            <i className="icon icon-menu-3 s-24 align-middle"></i> <span className="counter">
+            {tracks.length}
+            </span>
           </a>
         </div>
       </div>

@@ -49,7 +49,7 @@ const VideoPostType = ({ post }) => {
                 <div className="card-img-overlay">
                   <div className="pt-3 pb-3">
                     <figure className="float-left mr-3 mt-1">
-                      <i className="icon-play s-36"></i>
+                      <i className="icon-video-player s-36"></i>
                     </figure>
                     <div>
                       <h5>{post.title}</h5>

@@ -24,7 +24,7 @@ const HomeSlider = () => {
     <Slider {...settings} >
       {slides.map(({ title, subtitle, url, btnLabel, image }) => (
         <div key={title}>
-          <div className="xv-slide" data-bg-possition="top" style={backgroundImage(image)}>
+          <div className="xv-slide theme-text" data-bg-possition="top" style={backgroundImage(image)}>
             <div className="pt-5 pb-5 has-bottom-gradient">
               <LayoutContainer>
                 <div className="row">

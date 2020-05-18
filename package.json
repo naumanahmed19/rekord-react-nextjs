@@ -21,6 +21,7 @@
     "next-routes": "^1.4.2",
     "nextjs-progressbar": "^0.0.4",
     "node-sass": "^4.13.1",
+    "node-snackbar": "^0.1.16",
     "nprogress": "^0.2.0",
     "popper.js": "^1.12.5",
     "postcss-easy-import": "^3.0.0",
@@ -34,6 +35,7 @@
     "react-lightgallery": "^0.6.3",
     "react-slick": "^0.25.2",
     "react-toast-notifications": "^2.4.0",
+    "react-toastify": "^6.0.4",
     "slick-carousel": "^1.8.1",
     "wavesurfer.js": "^3.3.1"
   },
