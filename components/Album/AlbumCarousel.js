@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import Album from "./Album";
+import Album from "./Album"
 const AlbumCarousel = ({ albums,title,subtitle }) => {
   var settings = {
     dots: true,

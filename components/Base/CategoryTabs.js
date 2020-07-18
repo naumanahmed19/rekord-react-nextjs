@@ -1,5 +1,5 @@
 import { Nav, Tabs, Tab } from "react-bootstrap";
-import { TrackList } from "../components";
+import { TrackList } from "..";
 
 const CategoryTabs = ({ title, subtitle, tabs, tracks }) => {
   return (

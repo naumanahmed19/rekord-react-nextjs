@@ -1,4 +1,4 @@
-import { PlayListProvider } from "../components/PlaylistContext";
+import { PlayListProvider } from "../components/Providers/PlaylistContext";
 import { NavSidebar, PlayList, NabBar, Search } from "../components";
 import NextNProgress from "nextjs-progressbar";
 import {PRIMARY_COLOR} from '../config/Config'

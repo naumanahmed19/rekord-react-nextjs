@@ -1,7 +1,7 @@
 
 import { useRouter } from "next/router";
 import Link from "next/link";
-import {PlayButton, Like} from "."; 
+import {PlayButton, Like} from ".."; 
 
 const Album = props => {
   const { id, title, slug, image, artists, tracks, liked=false,likes } = props.album;
@@ -15,10 +15,12 @@ const Album = props => {
   const content = $classes => {
     return (
       <Link href="/album/[slug]" as={`/album/${slug}`}>
-      <div className={$classes} >
-        <h5>{title}</h5>
-        <span>{artists[0].name}</span>
-      </div>
+        <a>
+        <div className={$classes} >
+          <h5>{title}</h5>
+          <span>{artists[0].name}</span>
+        </div>
+        </a>
       </Link>
     );
   };

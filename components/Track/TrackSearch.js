@@ -1,6 +1,6 @@
 import { Component } from "react";
-import { tracks } from "../assets/data/data";
-import { TrackList } from ".";
+import { tracks } from "../../assets/data/data";
+import { TrackList } from "..";
 
 class Search extends Component {
   state = { q: "", tracks: [] };

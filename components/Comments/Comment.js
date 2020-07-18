@@ -1,6 +1,6 @@
 const Commnet = ({ comment }) => {
   const commentTemplate =comment => (
-    <li className="media my-5 ">
+    <li className="media my-5" key={comment.id}>
       <div className="avatar avatar-md mr-3 mt-1">
         <img src={comment.user.avatar} alt="" />
       </div>

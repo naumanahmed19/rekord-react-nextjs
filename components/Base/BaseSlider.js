@@ -1,13 +1,9 @@
-import Head from "next/head";
-import Layout from "../components/Layout";
-import Slider from "react-slick";
-import img1 from "../assets/img/demo/v5.jpg";
-import { Animated } from "react-animated-css";
-import {slides} from '../assets/data/data';
-import {backgroundImage} from '../helpers/Utils';
 
-import {html} from '../helpers/Utils';
-import { LayoutContainer } from ".";
+import Slider from "react-slick";
+import { Animated } from "react-animated-css";
+
+import {html,backgroundImage} from '../../helpers/Utils';
+import { LayoutContainer } from "..";
 
 var settings = {
   dots: false,
@@ -18,7 +14,7 @@ var settings = {
   slidesToScroll: 1
 };
 
-const HomeSlider = () => {
+const BaseSlider = ({slides}) => {
 
   return (
     <Slider {...settings} >
@@ -49,4 +45,4 @@ const HomeSlider = () => {
     </Slider>
   );
 };
-export default HomeSlider;
+export default BaseSlider;

@@ -98,9 +98,20 @@ Version:    1.0.0
 
 
 
-.r-conainter{
-    max-width: 1780px;
-    margin: 0 auto;
+
+@media(min-width: 1031px){
+  .has-sidenav{
+    .r-conainter{
+    margin-left: 80px;
+    }
+  }
+}
+
+@media(min-width: 1700px){
+  .r-conainter{
+      max-width: 1780px;
+      margin: 0 auto !important;
+  }
 }
 
 

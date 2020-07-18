@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Slider from "react-slick";
 import { videos } from "../../assets/data/data";
-import { Comments, Layout, Sidebar } from "../../components";
+import { Comments, Layout, Sidebar,Like } from "../../components";
 import { Col, Row } from "react-bootstrap";
 
 const Video = ({ video }) => {
@@ -39,36 +39,13 @@ const Video = ({ video }) => {
                     <a
                       href="#"
                       className="snackbar"
-                      data-text="Added to favourites"
-                      data-pos="top-right"
-                      data-showAction="true"
-                      data-actionText="ok"
-                      data-actionTextColor="#fff"
-                      data-backgroundColor="#0c101b"
                     >
                       <i className="icon-bookmark s-24"></i>
                     </a>
+                       <Like className="ml-3" likes={video.liked} likes={video.likes || 0} size="s-24"/>
                     <a
                       href="#"
-                      className="snackbar ml-3"
-                      data-text="Added to favourites"
-                      data-pos="top-right"
-                      data-showAction="true"
-                      data-actionText="ok"
-                      data-actionTextColor="#fff"
-                      data-backgroundColor="#0c101b"
-                    >
-                      <i className="icon-heart s-24"></i>
-                    </a>
-                    <a
-                      href="#"
-                      className="snackbar ml-3"
-                      data-text="Added to favourites"
-                      data-pos="top-right"
-                      data-showAction="true"
-                      data-actionText="ok"
-                      data-actionTextColor="#fff"
-                      data-backgroundColor="#0c101b"
+                      className="ml-3"
                     >
                       <i className="icon-share-1 s-24"></i>
                     </a>
@@ -81,7 +58,7 @@ const Video = ({ video }) => {
                 className="embed-responsive-item"
                 src={video.url}
                 height="540"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </div>
@@ -95,7 +72,6 @@ const Video = ({ video }) => {
                       140
                     </span>
                     <div>
-                      {" "}
                       Likes
                       <span className="text-primary">
                         <i className="icon icon-arrow_downward"></i> 67%
@@ -124,7 +100,6 @@ const Video = ({ video }) => {
                       {video.comments.length}
                     </span>
                     <div>
-                      {" "}
                       Iron
                       <span className="text-indigo">
                         <i className="icon icon-arrow_downward"></i> 89%
@@ -139,7 +114,6 @@ const Video = ({ video }) => {
                       224
                     </span>
                     <div>
-                      {" "}
                       Sodium
                       <span className="pink-text">
                         <i className="icon icon-arrow_downward"></i> 47%

@@ -1,9 +1,9 @@
-import { TrackList,Widget } from "..";
+import { TrackList,BaseWidget } from "..";
 const TrackWidget = ({title,tracks}) => {
     return (  
-    <Widget title={title} >
+    <BaseWidget title={title} >
         <TrackList tracks={tracks}/> 
-    </Widget>
+    </BaseWidget>
 );
 }
  

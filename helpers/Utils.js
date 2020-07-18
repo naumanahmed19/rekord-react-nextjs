@@ -1,5 +1,6 @@
 const someCommonValues = ['common', 'values'];
 import Snackbar from "node-snackbar/dist/snackbar.js";
+import {DARK_MODE} from '../config/Config';
 
 
 export const handleOpenPlayList = () => {
@@ -55,3 +56,12 @@ export const backgroundImage = imageUrl => {
       });
 
   }
+  
+  
+  export const bodyClassess = () =>{
+    let classses = ['sidebar-mini', 'sidebar-collapse','sidebar-expanded-on-hover','has-preloader','has-sidenav'];
+    if(DARK_MODE){
+      classses.push('theme-dark')
+    }
+  return classses.join(' ');
+  };

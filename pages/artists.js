@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Layout, Artist, ArtistLettersFilter } from "../components";
-import { artists, artistsByCategory } from "../assets/data/data";
+import { artists, artistsByCategory } from "../../assets/data/data";
 import { Row, Col } from "react-bootstrap";
 import { Animated } from "react-animated-css";
 

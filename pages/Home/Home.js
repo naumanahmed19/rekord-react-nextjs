@@ -1,9 +1,10 @@
-import Layout from "../../components/Layout";
-import {  homeTabs, albums,posts, events,tracks } from "../../assets/data/data";
+
+import {  homeTabs, albums,posts, events,tracks, slides } from "../../assets/data/data";
 
 
 import {
-  HomeSlider,
+  BaseSlider,
+  Layout,
   AlbumCarousel,
   PostCarousel,
   CategoryTabs,
@@ -39,7 +40,7 @@ var settings = {
 const Home = () => {
   return (
     <div>
-    <HomeSlider />
+    <BaseSlider slides={slides} />
     <Layout>
         <div className="p-3b">
         <section>
@@ -75,6 +76,8 @@ const Home = () => {
         </section>
       </div>
     </Layout>
+
+    
     </div>
   );
 };

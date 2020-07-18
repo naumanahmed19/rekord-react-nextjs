@@ -1,6 +1,6 @@
-import { handleSidebarMenu } from "../helpers/Utils.js";
+import { handleSidebarMenu } from "../../helpers/Utils.js";
 import Player from "./Player";
-import { users } from "../assets/data/data";
+import { users } from "../../assets/data/data";
 
 const NavBar = () => {
   const currentUser = users[0];

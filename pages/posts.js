@@ -1,6 +1,6 @@
 import { Layout, Post, Sidebar } from "../components";
 import { Row, Col } from "react-bootstrap";
-import { posts } from "../assets/data/data";
+import { posts } from "../../assets/data/data";
 
 const Posts = ({ posts }) => {
   return (

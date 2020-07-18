@@ -1,14 +1,12 @@
 import React, { Component, useState, createContext } from "react";
 
-import { AUTO_PLAY, WAVE_COLOR } from "../config/Config";
+import { AUTO_PLAY, WAVE_COLOR ,PRIMARY_COLOR } from "../../config/Config";
 
-import { playListTracks } from "../assets/data/data";
+import { playListTracks } from "../../assets/data/data";
 
-import { PRIMARY_COLOR } from "../config/Config";
+import { TrackSnackBar } from "..";
 
-import { TrackSnackBar } from ".";
-
-import { snackbar } from "../helpers/Utils";
+import { snackbar } from "../../helpers/Utils";
 
 export const PlayListContext = createContext();
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Layout from "../components/Layout";
-import { tracks as podcasts } from "../assets/data/data";
+import { tracks as podcasts } from "../../assets/data/data";
 import { Podcast, Banner, PlayButton, AvatarGroup } from "../components";
 class Poadcasts extends Component {
   state = {};

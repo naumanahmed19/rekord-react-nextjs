@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Layout, Gallery } from "../components";
-import { photos } from "../assets/data/data";
+import { photos } from "../../assets/data/data";
 import { LightgalleryItem } from "react-lightgallery";
 import { LightgalleryProvider } from "react-lightgallery";
 import {Card,CardColumns} from 'react-bootstrap'

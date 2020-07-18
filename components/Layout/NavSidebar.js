@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { useRouter } from "next/router";
 // pages/index.js
 import Link from "next/link";
-import { handleSidebarMenu } from "../helpers/Utils";
 
 const Sidebar = () => {
   const router = useRouter();

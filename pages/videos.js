@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Layout, Video} from "../components";
-import { videos } from "../assets/data/data";
+import { videos } from "../../assets/data/data";
 
 class Videos extends Component {
   state = {};

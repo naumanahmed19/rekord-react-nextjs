@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { date } from "../helpers/Utils";
+import { date } from "../../helpers/Utils";
 import { Animated } from "react-animated-css";
-import {AvatarGroup} from '../components';
+import {AvatarGroup} from '..';
 
 const Event = ({ className, event, type = "grid" }) => {
   const event_date = event.date.split(" ");
@@ -15,7 +15,7 @@ const Event = ({ className, event, type = "grid" }) => {
         </div>
         <div>
           <Link href="/event/[event.slug]" as={`/event/${event.slug}`}>
-            <h4 className="text-primary">{event.title}</h4>
+            <a><h4 className="text-primary">{event.title}</h4></a>
           </Link>
         </div>
         <small> {event.venue}</small>
@@ -35,7 +35,7 @@ const Event = ({ className, event, type = "grid" }) => {
 
         <div className="ml-auto">
           <Link href="/event/[slug]" as={`/event/${event.slug}`}>
-            View Details
+           <a> View Details</a>
           </Link>
         </div>
       </div>

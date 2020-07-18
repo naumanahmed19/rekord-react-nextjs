@@ -33,26 +33,12 @@ const Album = ({ album }) => {
                     <div className="ml-auto mb-2">
                       <a
                         href="#"
-                        className="snackbar"
-                        data-text="Bookmark clicked"
-                        data-pos="top-right"
-                        data-showAction="true"
-                        data-actionText="ok"
-                        data-actionTextColor="#fff"
-                        data-backgroundColor="#0c101b"
                       >
                         <i className="icon-bookmark s-24"></i>
                       </a>
                       <Like className="ml-3" likes={album.liked} likes={album.likes} size="s-24"/>
                       <a
                         href="#"
-                        className="snackbar ml-3"
-                        data-text="Thanks for sharing"
-                        data-pos="top-right"
-                        data-showAction="true"
-                        data-actionText="ok"
-                        data-actionTextColor="#fff"
-                        data-backgroundColor="#0c101b"
                       >
                         <i className="icon-share-1 s-24"></i>
                       </a>
