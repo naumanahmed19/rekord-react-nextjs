@@ -1,5 +1,5 @@
 import React, { Component, useState, useContext } from "react";
-import { PlayListContext } from "../Providers/PlaylistContext.js";
+import { PlayListContext } from "../../context/PlaylistContext";
 import { PlayButton, AddToPlaylistButton } from "..";
 const Track = ({ track, style = "full" }) => {
   const {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Layout, Event} from "../components";
-import { events } from "../../assets/data/data";
+import { events } from "../assets/data/data";
 import { Row } from "react-bootstrap";
 
 class Events extends Component {

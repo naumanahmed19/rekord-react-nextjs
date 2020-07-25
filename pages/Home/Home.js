@@ -9,34 +9,7 @@ import {
   PostCarousel,
   CategoryTabs,
   EventList ,
-  PostWidget
 } from "../../components";
-import Slider from "react-slick";
-    
-var settings = {
-  dots: true,
-
-  // responsive: [
-  //   {
-  //     breakpoint: 768,
-  //     settings: {
-  //       arrows: false,
-  //       centerMode: true,
-  //       centerPadding: "40px",
-  //       slidesToShow: 3
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       arrows: false,
-  //       centerMode: true,
-  //       centerPadding: "40px",
-  //       slidesToShow: 1
-  //     }
-  //   }
-  // ]
-};
 const Home = () => {
   return (
     <div>

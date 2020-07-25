@@ -7,7 +7,7 @@ import { html } from "../../helpers/Utils";
 
 import { Layout, TrackList,Like } from "../../components";
 import { backgroundImage } from "../../helpers/Utils";
-import { PlayListContext } from "../../components/PlaylistContext";
+import { PlayListContext } from "../../context/PlaylistContext"
 
 const Album = ({ album }) => {
 

@@ -1,5 +1,5 @@
 import React, { Component, useState, useContext } from "react";
-import { PlayListContext } from "../Providers/PlaylistContext";
+import { PlayListContext } from "../../context/PlaylistContext";
 import {handleOpenPlayList} from "../../helpers/Utils.js";
 
 const Player = props => {

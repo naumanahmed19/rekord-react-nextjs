@@ -26,7 +26,7 @@
     "popper.js": "^1.12.5",
     "postcss-easy-import": "^3.0.0",
     "postcss-url": "^8.0.0",
-    "react": "16.13.0",
+    "react": "16.13.1",
     "react-animated-css": "^1.2.1",
     "react-bnb-gallery": "^1.1.9",
     "react-bootstrap": "^1.0.0-beta.17",

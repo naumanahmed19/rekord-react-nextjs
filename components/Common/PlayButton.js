@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PlayListContext } from "../Providers/PlaylistContext";
+import { PlayListContext } from "../../context/PlaylistContext";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const PlayButton = ({ track, large, medium, primary }) => {

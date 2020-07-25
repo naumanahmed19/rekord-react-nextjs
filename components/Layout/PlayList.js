@@ -2,7 +2,7 @@ import React, { Component, useState, useContext } from "react";
 import Layout from "./Layout";
 
 
-import { PlayListContext } from "../Providers/PlaylistContext.js";
+import { PlayListContext } from "../../context/PlaylistContext";
 import Track from "../Track/Track";
 import {handleOpenPlayList} from "../../helpers/Utils.js";
 // import {tracks} from "../../assets/data/data";
