@@ -97,6 +97,7 @@ export const photos = [
 
 export const artists = [
   {
+    id:0,
     name: "Atif Aslam",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u4.jpg",
@@ -104,6 +105,7 @@ export const artists = [
     category: 'A',
   },
   {
+    id:1,
     name: "Atif khan",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u1.jpg",
@@ -111,6 +113,7 @@ export const artists = [
     category: 'A',
   },
   {
+    id:2,
     name: "Ahas Joe",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u2.jpg",
@@ -118,6 +121,7 @@ export const artists = [
     category: 'A',
   },
   {
+    id:3,
     name: "Sara Joe",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u5.jpg",
@@ -125,6 +129,7 @@ export const artists = [
     category: 'C',
   },
   {
+    id:4,
     name: "Bara Joe",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u6.jpg",
@@ -132,6 +137,7 @@ export const artists = [
     category: 'B',
   },
   {
+    id:5,
     name: "Bouni Joe",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u7.jpg",
@@ -139,6 +145,7 @@ export const artists = [
     category: 'B',
   },
   {
+    id:6,
     name: "Boi Joe",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u3.jpg",
@@ -146,6 +153,7 @@ export const artists = [
     category: 'B',
   },
   {
+    id:7,
     name: "DJ Aslam",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u4.jpg",
@@ -153,6 +161,7 @@ export const artists = [
     category: 'D',
   },
   {
+    id:8,
     name: "Dpou khan",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u1.jpg",
@@ -160,6 +169,7 @@ export const artists = [
     category: 'D',
   },
   {
+    id:9,
     name: "Dyndaia Joe",
     avatar:
       "http://xvelopers.com/wp/themes/rekord/wp-content/uploads/sites/48/2019/03/u2.jpg",

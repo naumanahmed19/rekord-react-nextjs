@@ -1,5 +1,8 @@
 import Slider from "react-slick";
 import PropTypes from 'prop-types';
+
+
+
 const ArtistLettersFilter = ({ showAll, showonly, category }) => {
   let settings = {
     dots: false,
@@ -57,6 +60,7 @@ const ArtistLettersFilter = ({ showAll, showonly, category }) => {
     "Z",
   ];
 
+  
   const buttonClasses = (letter) => {
     return `btn btn-outline-primary btn btn-sm r-5 ${
       letter === category ? "active" : ""
@@ -66,14 +70,14 @@ const ArtistLettersFilter = ({ showAll, showonly, category }) => {
   return (
     <Slider className="mb-5" {...settings}>
       <div>
-        <button class={buttonClasses("all")} onClick={showAll}>
+        <button className={buttonClasses("all")} onClick={showAll}>
           All
         </button>
       </div>
       {letters.map((letter) => (
-        <div>
+        <div key={letter}>
           <button
-            class={buttonClasses(letter)}
+            className={buttonClasses(letter)}
             onClick={() => showonly(letter)}
           >
             {letter}
@@ -87,7 +91,7 @@ const ArtistLettersFilter = ({ showAll, showonly, category }) => {
 export default ArtistLettersFilter;
 
 ArtistLettersFilter.propTypes = {
-  showAll: PropTypes.Func,
-  showonly: PropTypes.Func,
+  showAll: PropTypes.func,
+  showonly: PropTypes.func,
   category: PropTypes.string,
 };

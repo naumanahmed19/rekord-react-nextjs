@@ -1,17 +1,13 @@
-import { useRouter } from "next/router";
-import fetch from "isomorphic-unfetch";
 
 import { events } from "../../assets/data/data";
-import { html } from "../../helpers/Utils";
-
-import { TrackList, Layout, Content } from "../../components";
-import { backgroundImage } from "../../helpers/Utils";
+import { Layout, Content } from "../../components";
 import GoogleMapReact from "google-map-react";
 import Countdown from "react-countdown";
+import { configure } from "nprogress";
+import {GOOGLE_API_KEY} from '../../config/Config'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Event = ({ event }) => {
-  const router = useRouter();
   //   const { id } = router.query;
   const defaultProps = {
     center: {
@@ -92,13 +88,29 @@ const Event = ({ event }) => {
   };
 
   return (
-    <Layout layout="full">
+<div>
+<div style={{ height: "400px", width: "100%" }}>
+            <GoogleMapReact
+              bootstrapURLKeys={{
+                key: GOOGLE_API_KEY,
+              }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+              options={mapOptions}
+            >
+              <AnyReactComponent
+                lat={59.955413}
+                lng={30.337844}
+                text="My Marker"
+              />
+            </GoogleMapReact>
+          </div>
+
+    <Layout>
       <div className="row grid">
         <div className="col-md-7">
           <div className="p-5 ">
-            <div
-              className="scrollable"
-            >
+            <div>
               <div className="mb-5 theme-text">
                 <h1 className="mb-2">{event.title}</h1>
                 <div className="d-flex align-items-center mt-4">
@@ -113,15 +125,6 @@ const Event = ({ event }) => {
                     </span>
                   </div>
                 </div>
-              </div>
-              <Countdown date={new Date(event.date)} renderer={renderer} />,
-              <div className="pt-3">
-                <a
-                  href="events-single.html"
-                  className="btn  btn-lg r-0 btn-outline-primary"
-                >
-                  Buy Tickets Now
-                </a>
               </div>
               <Content className="my-5" content={event.content} />
               <div className="relative my-5">
@@ -148,36 +151,25 @@ const Event = ({ event }) => {
           </div>
         </div>
         <div className="col-md-5 height-full">
-          <div style={{ height: "100vh", width: "100%" }}>
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: "AIzaSyC3YkZNNySdyR87o83QEHWglHfHD_PZqiw",
-              }}
-              defaultCenter={defaultProps.center}
-              defaultZoom={defaultProps.zoom}
-              options={mapOptions}
-            >
-              <AnyReactComponent
-                lat={59.955413}
-                lng={30.337844}
-                text="My Marker"
-              />
-            </GoogleMapReact>
-          </div>
+        <Countdown date={new Date(event.date)} renderer={renderer} />
+              <div className="pt-3">
+                <a
+                  href="events-single.html"
+                  className="btn  btn-lg r-0 btn-outline-primary"
+                >
+                  Buy Tickets Now
+                </a>
+              </div>
         </div>
       </div>
     </Layout>
+    </div>
   );
 };
 
 Event.getInitialProps = async (ctx) => {
   const { slug } = ctx.query;
-
   const event = events.filter((event) => event.slug == slug)[0];
-
-  console.log(event);
-  // const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  // const json = await res.json()
   return { event };
 };
 

@@ -1,11 +1,11 @@
 import { Card } from "react-bootstrap";
 import { Content } from "..";
-import { Animated } from "react-animated-css";
 import { date } from "../../helpers/Utils";
 import Link from "next/link";
+import Animate from "animate.css-react";
 const Post = ({ post }) => {
   return (
-    <Animated animationIn="fadeInUp" isVisible={true}>
+    <Animate appear="fadeInUp">
       <Card className="mb-3">
         <div className="p-3">
           <div className="d-md-flex align-items-center">
@@ -56,7 +56,7 @@ const Post = ({ post }) => {
           </div>
         </Card.Body>
       </Card>
-    </Animated>
+    </Animate>
   );
 };
 

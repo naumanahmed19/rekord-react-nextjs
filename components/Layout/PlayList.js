@@ -30,7 +30,7 @@ const { tracks } = useContext(PlayListContext);
           <div className="p-3">
             <ul id="playlist" className="playlist list-group">
               {tracks.map((track,index) => (
-                <Track style="mini" track={track} key={index} className="list-group-item my-1" />
+                <Track style="mini" track={track} hasDelete key={index} className="list-group-item my-1" />
               ))}
             </ul>
           </div>

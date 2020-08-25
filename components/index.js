@@ -16,7 +16,6 @@ export { default as EventList }  from "./Event/EventList";
 export { default as Album }  from "./Album/Album";
 
 
-
 //Video
 export { default as Video }  from "./Video/Video";
 export { default as VideoWidget }  from "./Video/VideoWidget";
@@ -34,7 +33,10 @@ export { default as Post }  from "./Post/Post";
 export { default as PostWidget }  from "./Post/PostWidget";
 export { default as PostCarousel }  from "./Post/PostCarousel";
 
-export { default as Gallery }  from "./Gallery/Gallery";
+//Gallery
+export { default as GalleryItem }  from "./Gallery/GalleryItem";
+
+
 export { default as Artist }  from "./Artist/Artist";
 export { default as Podcast }  from "./Podcast/Podcast";
 export { default as ArtistLettersFilter }  from "./Artist/ArtistLettersFilter";

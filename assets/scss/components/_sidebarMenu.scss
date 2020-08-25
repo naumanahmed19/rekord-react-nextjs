@@ -1,25 +1,15 @@
-
-
-.sidebar-expanded-on-hover{
-  .has-sidebar {
-    // margin-left: 80px;
-    // @include tablet-and-phone {
-    //   margin-left: 0 !important;
-    // }
-    transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
-    &.page{
-      overflow: hidden;
-    }
+.has-sidebar {
+  margin-left: 80px;
+  &.has-sidebar-tabs {
+    margin-left: 330px;
   }
-}
-.sidebar-push{
-  .page {
-    margin-left: 270px;
-    @include tablet-and-phone {
-      margin-left: 0 !important;
-    }
-    transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
-}
+  @include tablet-and-phone {
+    margin-left: 0 !important;
+  }
+  transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
+  &.page{
+    overflow: hidden;
+  }
 }
 
 .sidebar-offcanvas-desktop {
@@ -44,11 +34,11 @@
     margin-right: 10px;
   }
 }
-// .sidebar-collapse {
-//   .has-sidebar {
-//     margin-left: 0;
-//   }
-// }
+.sidebar-collapse {
+  .has-sidebar {
+    margin-left: 0;
+  }
+}
 .offcanvas {
   transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
   overflow: hidden;
@@ -239,12 +229,37 @@ letter-spacing: 0.4px;
   }
 }
 
+.sidebar-tabs {
+  .nav {
+    text-align: center;
+    a {
+      border-radius: 0;
+      text-align: center;
+      font-size: 20px;
+      padding: 14px;
+      color: $default-text-color;
+
+    }
+  }
+  .tab-content {
+    border-left: 1px solid $brand-border;
+  }
+}
+
+//.sidebar-top-offset{
+//  .main-sidebar, .left-side {
+//    top: 54px;
+//    @media (min-width: 768px) {
+//      top: 75px;
+//    }
+//  }
+//}
 @media (min-width: 767px) {
   .sidebar-mini.sidebar-collapse {
     .has-sidebar,
     .right-side,
     .main-footer {
-   //   margin-left: 80px;
+      margin-left: 80px;
       z-index: 840;
     }
     .main-sidebar {
@@ -255,6 +270,9 @@ letter-spacing: 0.4px;
     .sidebar-menu > li {
       position: relative;
       > a {
+        // font-size: 26px;
+        //padding-left: 22px;
+        //  margin-right: 0;
 
         > span {
           border-top-right-radius: 4px;

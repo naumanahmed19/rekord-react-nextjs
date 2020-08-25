@@ -5,9 +5,6 @@ import { Comments, Layout, Sidebar,Like } from "../../components";
 import { Col, Row } from "react-bootstrap";
 
 const Video = ({ video }) => {
-  const router = useRouter();
-  //   const { id } = router.query;
-
   var settings = {
     slidesToShow: 4,
     responsive: [
@@ -25,10 +22,10 @@ const Video = ({ video }) => {
       },
     ],
   };
-
+  
   return (
     <Layout>
-      <Row>
+      <Row className="my-5">
         <Col md={8}>
           <div className="video-responsive">
             <div className="card no-b r-0">
@@ -36,17 +33,11 @@ const Video = ({ video }) => {
                 <div className="d-lg-flex align-items-center">
                   <h1 className="my-3 h4">{video.title}</h1>
                   <div className="ml-auto">
-                    <a
-                      href="#"
-                      className="snackbar"
-                    >
+                    <a href="">
                       <i className="icon-bookmark s-24"></i>
                     </a>
-                       <Like className="ml-3" likes={video.liked} likes={video.likes || 0} size="s-24"/>
-                    <a
-                      href="#"
-                      className="ml-3"
-                    >
+                      <Like className="ml-3" likes={video.liked} likes={video.likes || 0} size="s-24"/>
+                    <a className="ml-3">
                       <i className="icon-share-1 s-24"></i>
                     </a>
                   </div>
@@ -141,11 +132,7 @@ const Video = ({ video }) => {
 
 Video.getInitialProps = async (ctx) => {
   const { slug } = ctx.query;
-
  const video = videos.filter((video) => video.slug == slug)[0];
-
-  // // const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  // // const json = await res.json()
  return { video };
 };
 

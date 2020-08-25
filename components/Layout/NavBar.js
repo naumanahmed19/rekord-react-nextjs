@@ -13,13 +13,6 @@ const NavBar = () => {
       inputSearch = searchOverlayContainer.querySelector(
         ".searchOverlay__input"
       );
-
-    console.log(mainContainer);
-
-    // openCtrl = document.getElementById('btn-searchOverlay'),
-    // closeCtrl = document.getElementById('btn-searchOverlay-close'),
-
-    //   console.log("gedddee");
     mainContainer.classList.add("main-wrap--hide");
     searchOverlayContainer.classList.add("searchOverlay--open");
     setTimeout(function () {
@@ -27,26 +20,7 @@ const NavBar = () => {
     }, 500);
   };
 
-  // function init() {
 
-  //     initEvents();
-  // }
-
-  // function initEvents() {
-  //     openCtrl.addEventListener('click', openSearch);
-  //     closeCtrl.addEventListener('click', closeSearch);
-  //     document.addEventListener('keyup', function (ev) {
-  //         // escape key.
-  //         if (ev.keyCode == 27) {
-  //             closeSearch();
-  //         }
-  //     });
-  // }
-
-  // if ($('.searchOverlay').length > 0) {
-  //     init();
-
-  // }
   return (
     <nav className="navbar-wrapper navbar-bottom-fixed shadow">
       <div className="navbar navbar-expand player-header justify-content-between  bd-navbar">
@@ -81,34 +55,13 @@ const NavBar = () => {
               </a>
             </li>
 
-            <li className="dropup custom-dropdown user user-menu ">
-              <a href="#" className="nav-link" data-toggle="dropdown">
+            <li className="dropup user user-menu ">
+              <a href="#" className="nav-link">
                 <figure className="avatar">
                   <img src={currentUser.avatar} alt="" />
                 </figure>
                 <i className="icon-more_vert "></i>
               </a>
-              <div className="dropdown-menu p-4 dropdown-menu-right">
-                <div className="row box justify-content-between my-4">
-                  <div className="col text-center">
-                    <a className="ajaxifyPage" href="saved.html">
-                      <i className="icon icon-save s-24"></i> <span>Saved</span>
-                    </a>
-                  </div>
-                  <div className="col text-center">
-                    <a className="ajaxifyPage" href="saved.html">
-                      <i className="icon icon-heart s-24"></i>{" "}
-                      <span>Favourites</span>
-                    </a>
-                  </div>
-                  <div className="col text-center">
-                    <a className="ajaxifyPage" href="profile.html">
-                      <i className="icon-user-4  s-24"></i>
-                      <div className="pt-1">Profile</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </li>
           </ul>
         </div>

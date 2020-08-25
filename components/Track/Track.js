@@ -1,7 +1,7 @@
 import React, { Component, useState, useContext } from "react";
 import { PlayListContext } from "../../context/PlaylistContext";
 import { PlayButton, AddToPlaylistButton } from "..";
-const Track = ({ track, style = "full" }) => {
+const Track = ({ track, style = "full", hasDelete }) => {
   const {
     isPlaying,
     handlePlayTrack,
@@ -79,7 +79,7 @@ const Track = ({ track, style = "full" }) => {
 
         <div className="d-flex">{time}</div>
       </div>
-      {/* <i className="icon-close ml-auto" onClick={()=>handleDeleteTrack(track)}/> */}
+  {hasDelete && <i className="icon-close ml-auto track-delete text-primary" onClick={()=>handleDeleteTrack(track)}/> }
     </li>
   );
 
@@ -96,7 +96,7 @@ const Track = ({ track, style = "full" }) => {
         {thumbnail}
          <div>
          {title}
-          {artist}
+         {artist}
          </div>
     
         </div>

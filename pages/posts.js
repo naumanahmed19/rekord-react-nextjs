@@ -1,8 +1,8 @@
 import { Layout, Post, Sidebar } from "../components";
 import { Row, Col } from "react-bootstrap";
-import { posts } from "../../assets/data/data";
+import { posts } from "../assets/data/data";
 
-const Posts = ({ posts }) => {
+const Posts = () => {
   return (
     <Layout
       title="Blog"
@@ -26,13 +26,4 @@ const Posts = ({ posts }) => {
     </Layout>
   );
 };
-
-Posts.getInitialProps = async (ctx) => {
-  // Make fetch request here...
-  // const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  // const posts = await res.json()
-
-  return { posts };
-};
-
 export default Posts;

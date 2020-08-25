@@ -17,7 +17,6 @@
 }
 
 /*
-
  * Component: Control sidebar. By default, this is the right sidebar.
  */
 // The sidebar's background control class
@@ -43,7 +42,6 @@
 .control-sidebar {
   position: absolute;
   z-index: 999999;
-  height: 100vh;
 
   // Fix position after header collapse
   //@media (max-width: $screen-sm) {

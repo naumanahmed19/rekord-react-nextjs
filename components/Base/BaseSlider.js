@@ -1,6 +1,5 @@
 
 import Slider from "react-slick";
-import { Animated } from "react-animated-css";
 
 import {html,backgroundImage} from '../../helpers/Utils';
 import { LayoutContainer } from "..";
@@ -15,7 +14,6 @@ var settings = {
 };
 
 const BaseSlider = ({slides}) => {
-
   return (
     <Slider {...settings} >
       {slides.map(({ title, subtitle, url, btnLabel, image }) => (
@@ -23,7 +21,7 @@ const BaseSlider = ({slides}) => {
           <div className="xv-slide theme-text" data-bg-possition="top" style={backgroundImage(image)}>
             <div className="pt-5 pb-5 has-bottom-gradient">
               <LayoutContainer>
-                <div className="row">
+                <div className="row py-5">
                   <div className="col-12 col-lg-6">
                     <div className="xv-slider-content clearfix color-white">
                       <h1 className="s-64 mt-5 font-weight-lighter">{title}</h1>

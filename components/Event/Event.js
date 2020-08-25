@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { date } from "../../helpers/Utils";
-import { Animated } from "react-animated-css";
 import {AvatarGroup} from '..';
+import Animate from "animate.css-react";
+
 
 const Event = ({ className, event, type = "grid" }) => {
   const event_date = event.date.split(" ");
@@ -14,7 +15,7 @@ const Event = ({ className, event, type = "grid" }) => {
           <span>{date(event.date,'m')}</span>
         </div>
         <div>
-          <Link href="/event/[event.slug]" as={`/event/${event.slug}`}>
+        <Link href="/event/[slug]" as={`/event/${event.slug}`}>
             <a><h4 className="text-primary">{event.title}</h4></a>
           </Link>
         </div>
@@ -64,9 +65,9 @@ const Event = ({ className, event, type = "grid" }) => {
   const grid = <div className="mb-3 card p-3">{details}</div>;
 
   return (
-    <Animated className={className} animationIn="fadeInUp" isVisible={true}>
+    <Animate className={className} appear="fadeInUp">
       {type == "grid" ? grid : list}
-    </Animated>
+    </Animate>
   );
 };
 

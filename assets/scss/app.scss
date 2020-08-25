@@ -99,21 +99,6 @@ Version:    1.0.0
 
 
 
-@media(min-width: 1031px){
-  .has-sidenav{
-    .r-conainter{
-    margin-left: 80px;
-    }
-  }
-}
-
-@media(min-width: 1700px){
-  .r-conainter{
-      max-width: 1780px;
-      margin: 0 auto !important;
-  }
-}
-
 
 
 
@@ -333,7 +318,7 @@ input[type="checkbox"].switch_3:checked + svg.checkbox .outer-ring {
 }
 
 input[type="checkbox"].switch_3:checked + svg.checkbox .is_checked {
-  opacity: 1;
+opacity: 1;
   -webkit-transform: translateX(0) rotate(0deg);
   transform: translateX(0) rotate(0deg);
 }
@@ -405,3 +390,8 @@ svg.checkbox .is_unchecked {
 }
 
 /* Switch 3 Specific Style End */
+.track-delete{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}

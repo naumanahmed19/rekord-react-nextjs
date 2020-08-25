@@ -41,7 +41,7 @@ export class PlayListProvider extends Component {
 
     //Auto Play
     if (AUTO_PLAY) this.setCurrentTrack(this.state.currentTrackIndex);
-    else
+    else if(this.state.tracks.length > 0)
       this.wavesurfer.load(this.state.tracks[this.state.currentTrackIndex].url);
   }
 
@@ -88,6 +88,12 @@ export class PlayListProvider extends Component {
 
     snackbar("Added to playlist");
 
+    //load only if first track
+    if(this.state.tracks.length == 0)
+      this.wavesurfer.load(track.url);
+    
+ 
+
     this.disablePrevNextBtn();
   };
 
@@ -123,6 +129,7 @@ export class PlayListProvider extends Component {
   };
 
   deleteTrack = (track) => {
+
     const tracksList = [...this.state.tracks];
     const tracks = tracksList.filter((t) => t.id !== track.id);
     this.setState({ tracks });
@@ -145,8 +152,6 @@ export class PlayListProvider extends Component {
 
     this.disablePrevNextBtn();
 
-    // await this.wavesurfer.pause();
-
     let track = tracks[index];
     if (!track.url) return;
 
@@ -161,12 +166,9 @@ export class PlayListProvider extends Component {
       await this.wavesurfer.play();
     }
 
-    //await this.wavesurfer.pause();
 
     try {
       await setTimeout(async () => {
-        // alert(this.wavesurfer.isReady);
-        // if (this.wavesurfer.isReady) {
         await this.wavesurfer.play();
         //  }
         this.togglePlayButtonIcon();
@@ -191,11 +193,12 @@ export class PlayListProvider extends Component {
   }
 
   isPlaying = (track) => {
-    return (
-      this.state.tracks[this.state.currentTrackIndex].id === track.id &&
-      this.state.tracks[this.state.currentTrackIndex].url === track.url &&
-      this.state.isPlaying
-    );
+      return (
+        this.state.tracks.length > 0 &&
+        this.state.tracks[this.state.currentTrackIndex].id === track.id &&
+        this.state.tracks[this.state.currentTrackIndex].url === track.url &&
+        this.state.isPlaying
+      );
   };
 
   isStream = () => {
@@ -203,6 +206,7 @@ export class PlayListProvider extends Component {
   };
 
   handlePlayPause = () => {
+
     this.isPlaying(this.state.tracks[this.state.currentTrackIndex]);
     this.wavesurfer.playPause();
     this.togglePlayButtonIcon();
@@ -234,8 +238,10 @@ export class PlayListProvider extends Component {
 
   disablePrevNextBtn = () => {
     let disableNext =
-      this.state.currentTrackIndex == this.state.tracks.length - 1;
+      this.state.tracks.length === 0 || this.state.currentTrackIndex == this.state.tracks.length - 1;
     let disablePrevious = this.state.currentTrackIndex == 0;
+
+    disableNext
     this.setState({
       disableNext,
       disablePrevious,

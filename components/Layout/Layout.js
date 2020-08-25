@@ -1,13 +1,8 @@
-import React, { Component } from "react";
-import Router from "next/router";
+import React from "react";
 import Head from "next/head";
-// import 'react-bnb-gallery/dist/style.css';
-import { Animated } from "react-animated-css";
 import { LayoutContainer } from  "..";
 import Styles from "../../assets/scss/app.scss";
-// @import '../fonts/lineicons.svg';
-// @import '../fonts/lineicons.ttf';
-// @import '../fonts/lineicons.woff';
+import Animate from "animate.css-react";
 
 const Layout = ({ children, title, subtitle, layout }) => {
   const header = () => {
@@ -24,16 +19,16 @@ const Layout = ({ children, title, subtitle, layout }) => {
   return (
     <React.Fragment>
       <Head>
-        <title>{title || "Next.js Starter Project"}</title>
+        <title>{title || "REKORD - Music React Template"}</title>
         <style dangerouslySetInnerHTML={{ __html: Styles }} />
       </Head>
       <LayoutContainer layout={layout}>
-        <Animated animationIn="fadeIn" isVisible={true}>
+        <Animate appear="fadeIn">
           <main id="pageContent">
             {header()}
             {children}
           </main>
-        </Animated>
+        </Animate>
       </LayoutContainer>
     </React.Fragment>
   );
