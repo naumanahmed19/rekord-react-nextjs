@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Slider from "react-slick";
 import { videos } from "../../assets/data/data";
-import { Comments, Layout, Sidebar,Like } from "../../components";
+import { Comments, Layout, Sidebar, Like } from "../../components";
 import { Col, Row } from "react-bootstrap";
 
 const Video = ({ video }) => {
@@ -22,7 +22,7 @@ const Video = ({ video }) => {
       },
     ],
   };
-  
+
   return (
     <Layout>
       <Row className="my-5">
@@ -36,7 +36,7 @@ const Video = ({ video }) => {
                     <a href="">
                       <i className="icon-bookmark s-24"></i>
                     </a>
-                      <Like className="ml-3" likes={video.liked} likes={video.likes || 0} size="s-24"/>
+                    <Like className="ml-3" likes={video.liked} likes={video.likes || 0} size="s-24" />
                     <a className="ml-3">
                       <i className="icon-share-1 s-24"></i>
                     </a>
@@ -132,8 +132,8 @@ const Video = ({ video }) => {
 
 Video.getInitialProps = async (ctx) => {
   const { slug } = ctx.query;
- const video = videos.filter((video) => video.slug == slug)[0];
- return { video };
+  const video = videos.filter((video) => video.slug == slug)[0];
+  return { video };
 };
 
 export default Video;

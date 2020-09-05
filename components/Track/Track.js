@@ -3,16 +3,13 @@ import { PlayListContext } from "../../context/PlaylistContext";
 import { PlayButton, AddToPlaylistButton } from "..";
 const Track = ({ track, style = "full", hasDelete }) => {
   const {
-    isPlaying,
-    handlePlayTrack,
-    handleAddToPlayList,
     handleDeleteTrack,
   } = useContext(PlayListContext);
 
-  const buttonClasses = () => {
-    let classes = isPlaying(track) ? "icon-pause" : "icon-play";
-    return (classes += " s-28 text-primary");
-  };
+
+  const title = <h6 className="text-truncate track-title">{track.title}</h6>;
+  
+  const time = <small className="ml-auto"> {track.time}</small>;
 
   const thumbnail = (
     <figure className="avatar-md float-left mr-3 mt-1">
@@ -20,85 +17,47 @@ const Track = ({ track, style = "full", hasDelete }) => {
     </figure>
   );
 
-  const time = <small className="ml-auto"> {track.time}</small>;
-
-  const title = <h6 className="text-truncate track-title">{track.title}</h6>;
-
   const artist = (
     <div className="track-artists">
       <small>
-        <a href="http://8560c281.ngrok.io/?post_type=artist&amp;p=255">
-          {track.artist}
+        <a href="#">
+          {track.artists[0].name}
         </a>
       </small>
-      <a
-        href="#"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        <small>
-          <i
-            className="icon-add"
-            data-toggle="tooltip"
-            data-placement="bottom"
-          ></i>{" "}
-          1 More{" "}
-        </small>
-      </a>
-      <div className="dropdown">
-        <div className="dropdown-menu">
-          <a
-            className="dropdown-item"
-            href="http://8560c281.ngrok.io/?post_type=artist&amp;p=222"
-          >
-            Zehr Doe
-          </a>
-          <a
-            className="dropdown-item"
-            href="http://8560c281.ngrok.io/?post_type=artist&amp;p=630"
-          >
-            Jehr Doe
-          </a>
-        </div>
-      </div>
     </div>
   );
 
   const mini = (
     <li className="list-group-item my-1">
       <div className="d-flex align-items-center">
-        {/* <i className={buttonClasses()} onClick={() => handlePlayTrack(track)}></i> */}
         <PlayButton track={track} primary />
         <div className="col-10">
           {thumbnail}
           {title}
           {artist}
         </div>
-        {/* {showTime && <small className="ml-auto"> {track.time}</small>} */}
-
         <div className="d-flex">{time}</div>
       </div>
-  {hasDelete && <i className="icon-close ml-auto track-delete text-primary" onClick={()=>handleDeleteTrack(track)}/> }
+      {hasDelete && <i className="icon-close ml-auto track-delete text-primary" onClick={() => handleDeleteTrack(track)} />}
     </li>
   );
 
   const full = (
     <div className="m-1 my-4">
       <div className="d-flex align-items-center">
-     
+
         <div className="col-md-6 d-flex align-items-center">
-        <div className="mr-3">
-          <PlayButton track={track} primary />
-          <AddToPlaylistButton track={track} />
-        </div>
-      
-        {thumbnail}
-         <div>
-         {title}
-         {artist}
-         </div>
-    
+          <div className="mr-3">
+            <PlayButton track={track} primary />
+            <AddToPlaylistButton track={track} />
+          </div>
+
+          {thumbnail}
+          <div>
+            {title}
+            {artist}
+          </div>
+
         </div>
         <div className="col-md-6 d-none d-lg-block">
           <div className="d-flex">
@@ -136,6 +95,7 @@ const Track = ({ track, style = "full", hasDelete }) => {
   );
 
   const renderTrack = () => {
+
     switch (style) {
       case "mini":
         return mini;

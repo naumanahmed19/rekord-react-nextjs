@@ -6,10 +6,6 @@ import { Row, Col } from "react-bootstrap";
 import { backgroundImage } from "../../helpers/Utils";
 
 const Post = ({ post }) => {
-  console.log(post);
-  const router = useRouter();
-  //   const { id } = router.query;
-
   return (
     <Layout layout="full">
       <div

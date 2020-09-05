@@ -1,5 +1,5 @@
 import { VideoWidget, EventWidget, TrackWidget } from  "..";
-import { posts, videos, events, tracks } from "../../assets/data/data";
+import { videos, events, tracks } from "../../assets/data/data";
 
 const Sidebar = () => {
   return (

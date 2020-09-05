@@ -27,14 +27,14 @@ const Album = ({ album }) => {
                   <div className="d-md-flex align-items-center justify-content-between">
                     <h1 className="my-3 text-white ">{album.title}</h1>
                     <div className="ml-auto">
-                    <a href="">
-                      <i className="icon-bookmark s-24"></i>
-                    </a>
-                      <Like className="ml-3" likes={album.liked} likes={album.likes || 0} size="s-24"/>
-                    <a className="ml-3">
-                      <i className="icon-share-1 s-24"></i>
-                    </a>
-                  </div>
+                      <a href="">
+                        <i className="icon-bookmark s-24"></i>
+                      </a>
+                      <Like className="ml-3" likes={album.liked} likes={album.likes || 0} size="s-24" />
+                      <a className="ml-3">
+                        <i className="icon-share-1 s-24"></i>
+                      </a>
+                    </div>
                   </div>
 
                   <div

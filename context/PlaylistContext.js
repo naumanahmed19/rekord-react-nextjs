@@ -1,6 +1,6 @@
 import React, { Component, useState, createContext } from "react";
 
-import { AUTO_PLAY, WAVE_COLOR ,PRIMARY_COLOR } from "../config/Config";
+import { AUTO_PLAY, WAVE_COLOR, PRIMARY_COLOR } from "../config/Config";
 
 import { playListTracks } from "../assets/data/data";
 
@@ -36,13 +36,13 @@ export class PlayListProvider extends Component {
       responsive: false,
     });
 
-    this.wavesurfer.on("ready", () => {});
+    this.wavesurfer.on("ready", () => { });
 
     this.wavesurfer.on("finish", () => this.handleNextTrack());
 
     //Auto Play
     if (AUTO_PLAY) this.setCurrentTrack(this.state.currentTrackIndex);
-    else if(this.state.tracks.length > 0)
+    else if (this.state.tracks.length > 0)
       this.wavesurfer.load(this.state.tracks[this.state.currentTrackIndex].url);
   }
 
@@ -90,10 +90,10 @@ export class PlayListProvider extends Component {
     snackbar("Added to playlist");
 
     //load only if first track
-    if(this.state.tracks.length == 0)
+    if (this.state.tracks.length == 0)
       this.wavesurfer.load(track.url);
-    
- 
+
+
 
     this.disablePrevNextBtn();
   };
@@ -111,17 +111,17 @@ export class PlayListProvider extends Component {
     });
 
     const tracks = [...this.state.tracks, ...newTrackList];
- 
-  setTimeout(() => {
-    this.setState({
-      tracks,
-    });
-    this.handlePlayTrack(trackList[0]);
-  }, 500);
-  
 
-   // console.log(this.state.tracks.length);
-   
+    setTimeout(() => {
+      this.setState({
+        tracks,
+      });
+      this.handlePlayTrack(trackList[0]);
+    }, 500);
+
+
+    // console.log(this.state.tracks.length);
+
 
 
     this.disablePrevNextBtn();
@@ -194,12 +194,12 @@ export class PlayListProvider extends Component {
   }
 
   isPlaying = (track) => {
-      return (
-        this.state.tracks.length > 0 &&
-        this.state.tracks[this.state.currentTrackIndex].id === track.id &&
-        this.state.tracks[this.state.currentTrackIndex].url === track.url &&
-        this.state.isPlaying
-      );
+    return (
+      this.state.tracks.length > 0 &&
+      this.state.tracks[this.state.currentTrackIndex].id === track.id &&
+      this.state.tracks[this.state.currentTrackIndex].url === track.url &&
+      this.state.isPlaying
+    );
   };
 
   isStream = () => {
