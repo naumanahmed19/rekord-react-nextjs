@@ -21,13 +21,6 @@ const Sidebar = () => {
     router.push(href);
     closeSidebarMenu();
   };
-  //   const handleClick = e => {
-  //     console.log(e);
-  //     // console.log(href);
-  //     e.preventDefault();
-  //     // router.push(href);
-  //   };
-
   const isActive = (href) => {
     return router.pathname === href ? "active" : "";
   };

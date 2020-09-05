@@ -15,14 +15,14 @@ const Home = () => {
     <div>
     <BaseSlider slides={slides} />
     <Layout>
-        <div className="p-3b">
+        <div className="p-3b mt-5">
         <section>
           <AlbumCarousel 
              title="Latest Posts"
              subtitle="Checkout What's new at our blog"
           albums={albums}  pp={events} />
         </section>
-        <section className="section">
+        <section className="section mt-5">
           <PostCarousel
             title="Latest Posts"
             subtitle="Checkout What's new at our blog"

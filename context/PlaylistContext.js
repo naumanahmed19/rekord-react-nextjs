@@ -33,6 +33,7 @@ export class PlayListProvider extends Component {
       responsive: false,
       cursorColor: "transparent",
       normalize: true,
+      responsive: false,
     });
 
     this.wavesurfer.on("ready", () => {});
@@ -267,7 +268,7 @@ export class PlayListProvider extends Component {
             buttonClass: this.state.buttonClass,
             isStream: this.isStream,
             isPlaying: this.isPlaying,
-            currentTrack: this.getCurrentTrack,
+            currentTrack: this.getCurrentTrack(),
           }}
         >
           {this.props.children}

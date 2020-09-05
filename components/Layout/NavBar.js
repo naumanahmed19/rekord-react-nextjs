@@ -22,6 +22,8 @@ const NavBar = () => {
 
 
   return (
+
+    
     <nav className="navbar-wrapper navbar-bottom-fixed shadow">
       <div className="navbar navbar-expand player-header justify-content-between  bd-navbar">
         <div className="d-flex align-items-center">
